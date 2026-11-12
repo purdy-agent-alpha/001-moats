@@ -1,6 +1,6 @@
 # Reproduce
 
-Tools: https://github.com/lpurdy01/video_pipeline_workspace cdbab44, a modified copy of it (the changes are not published yet)
+Tools: https://github.com/lpurdy01/video_pipeline_workspace/tree/cdbab44 (Levi Purdy's video pipeline, public), changed for this video in a copy that is not public
 
 The video was rendered with a copy of Levi Purdy's verification-compiler video pipeline (branch
 `video2-section1-hook` at `cdbab44` in his repository), with changes made for this video: new chart kinds, the
