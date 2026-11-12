@@ -1,0 +1,11 @@
+{
+  "vrm": 0.864,
+  "coverage": 1.0,
+  "citation_accuracy": 0.729,
+  "factual_claims": 44,
+  "factual_with_source": 44,
+  "sourced_claims": 70,
+  "supported": 51,
+  "checked": 70,
+  "claims": 104
+}

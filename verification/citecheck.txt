@@ -1,0 +1,1059 @@
+citecheck: the deterministic check of every reference cited by script/script.md, run 2026-11-12.
+
+How it was run: citecheck.py script.md sources.md, where sources.md is a list made from sources/sources.yaml
+(one line per cited source: "- S#: publisher, "title", its links"). "script.md:N" is a line of script/script.md.
+It fetches every link, then shows for each claim the two sentences of the source that share the most words with it.
+NO MATCH means no sentence shares enough of the claim's words; it flags paraphrase and numbers spoken as words as
+well as real gaps, so a flag is for a person to read, not a verdict. TITLE flags here come mostly from the generated
+list joining several titles of one source. NOT CHECKED means the fetch failed. The verdicts are in claims/. One quoted
+organisation phone number is left out.
+
+== script.md, sources.md: 70 references (3 arXiv, 67 URL)
+
+URL https://blog.beeper.com/p/beeper-mini-is-back  FLAGGED
+  title:   "Beeper Mini Is Back – Beeper Blog"
+  page:    live, moved to https://blog.beeper.com/2023/12/11/beeper-mini-is-back/
+  text:    html, 132 sentences
+  script.md:19, claim {reported: Beeper, Dec 2023}: "In December 2023, an app that rebuilt Apple's iMessage protocol from the outside was downloaded, its makers say, more than a hundred thousand times in two days."
+    match: none (best of those shown has 14% of the claim's words, 2 of them)
+    words of the claim the source never uses: december, maker, outside, protocol, rebuilt
+    > "In the first 48 hours, it was downloaded by more than 100,000 people." [bm25 10.4]
+    > "I don’t think it’s necessarily beeper mini that is Apple saying is risky." [bm25 6.4]
+  script.md:21, claim {reported: TechCrunch, Dec 2023}: "Three days after launch, Apple shut it out."
+    match: none (best of those shown has 26% of the claim's words, 2 of them)
+    words of the claim the source never uses: shut
+    > "For a glorious 3 days last week, Beeper Mini made this possible." [bm25 6.7]
+    > "Today, less than 3 days later, we are publishing an update to fix Beeper Mini." [bm25 6.4]
+  sources.md:27: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:19
+  ! NO MATCH: no sentence of the source matches the claim at script.md:21
+
+URL https://techcrunch.com/2023/12/14/apple-again-targets-imessage-on-android-app-beeper-but-company-claims-it-has-a-fix  FLAGGED
+  title:   "Apple again targets iMessage-on-Android app Beeper, but company claims it has a fix | TechCrunch"
+  page:    live
+  text:    html, 47 sentences
+  script.md:19, claim {reported: Beeper, Dec 2023}: "In December 2023, an app that rebuilt Apple's iMessage protocol from the outside was downloaded, its makers say, more than a hundred thousand times in two days."
+    match: none (best of those shown has 11% of the claim's words, 2 of them)
+    words of the claim the source never uses: 100000, 2, download, maker, outside, rebuilt, tim
+    > "— Beeper (@beeper) December 14, 2023" [bm25 7.9]
+    > "6:59 AM PST · December 14, 2023" [bm25 7.1]
+  script.md:21, claim {reported: TechCrunch, Dec 2023}: "Three days after launch, Apple shut it out."
+    match: weak (best of those shown has 53% of the claim's words, 4 of them)
+    > "A few days ago, the mobile app Beeper Mini went back into operation after an attempt by Apple to shut down its service that brings iMessage’s blue bubble texts to Android users." [bm25 6.7]
+    > "She joined the company after having previously spent over three years at ReadWriteWeb." [bm25 6.4]
+  sources.md:27: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:19
+
+URL https://www.morningstar.com/investing-definitions/economic-moat  ok
+  page:    refused a plain fetch (HTTP 403); read in the web toolkit's browser
+  text:    page, 22 sentences
+  script.md:35, claim {reported: Morningstar}: "Investors took the word from Warren Buffett."
+    match: weak (best of those shown has 36% of the claim's words, 2 of them)
+    words of the claim the source never uses: took, word
+    > "An economic moat (a term coined by Warren Buffett) is what allows a company to earn excess returns on capital for a long period of time and keep competitors at bay." [bm25 4.8]
+    > "Transparency is how we protect the integrity of our work and keep empowering investors to achieve their goals and dreams." [bm25 2.6]
+  script.md:45, claim {argued: Morningstar}: "Morningstar, which rates moats for investors, names five sources: brands, patents and licences; switching costs; network effects; lower costs; and niche markets only one or a few firms can serve."
+    match: weak (best of those shown has 14% of the claim's words, 4 of them)
+    words of the claim the source never uses: few, licenc, lower, nam, serve
+    > "Morningstar has identified five sources that create economic moats:" [bm25 9.7]
+    > "Network effect A network effect occurs when the value of a company’s service increases for both new and existing users as more people use the service." [bm25 7.7]
+  script.md:47, claim {argued: Morningstar}: "A wide moat, in its terms, is one expected to last more than twenty years. A moat is a measure of time."
+    match: weak (best of those shown has 59% of the claim's words, 6 of them)
+    words of the claim the source never uses: measure
+    > "A company whose competitive advantages we expect to last more than 20 years has a wide moat." [bm25 15.5]
+    > "One that can fend off its rivals for 10 years has a narrow moat." [bm25 6.3]
+  sources.md:28: reference entry, no claim to match
+
+URL https://www.berkshirehathaway.com/letters/2007ltr.pdf  ok
+  page:    live
+  text:    pdf, 636 sentences
+  script.md:37, claim {argued: Berkshire letter, 2007}: "In his 2007 letter he wrote that a truly great business must have an enduring moat, one that protects excellent returns on capital."
+    match: strong (best of those shown has 63% of the claim's words, 10 of them)
+    > "A truly great business must have an enduring “moat” that protects excellent returns on invested capital. The dynamics of capitalism guarantee that competitors will repeatedly assault any business “castle” that is earning high returns." [bm25 31.1]
+    > "Consequently, if measured only by economic returns, FlightSafety is an excellent but not extraordinary business." [bm25 12.3]
+  script.md:39, claim {argued: Buffett, 2007}: "Picture a castle earning good money. Competitors will keep attacking it; the moat is what makes their life difficult."
+    match: weak (best of those shown has 34% of the claim's words, 4 of them)
+    words of the claim the source never uses: attack
+    > "The second test, more subjective, is whether their “moats” – a metaphor for the superiorities they possess that make life difficult for their competitors – have widened during the year." [bm25 18.2]
+    > "A truly great business must have an enduring “moat” that protects excellent returns on invested capital. The dynamics of capitalism guarantee that competitors will repeatedly assault any business “castle” that is earning high returns." [bm25 13.0]
+  script.md:49, claim {argued: Berkshire letter, 2007}: "Buffett adds a warning: a moat that must be continuously rebuilt will eventually be no moat at all."
+    match: strong (best of those shown has 64% of the claim's words, 7 of them)
+    words of the claim the source never uses: warn
+    > "A moat that must be continuously rebuilt will eventually be no moat at all." [bm25 39.4]
+    > "Buffett Chairman of the Board" [bm25 9.1]
+  sources.md:29: reference entry, no claim to match
+
+URL https://www.7powers.com/synopsis/  FLAGGED
+  script.md:41: The strategist Hamilton Helmer calls what a business needs power: the conditions that create the potential for persistent differential returns. Persistent is the word that matters. [S62] {argued: Helm
+  sources.md:42: - S62: 7powers.com, "7 Powers, synopsis", https://www.7powers.com/synopsis/ https://www.7powers.com
+  ! NOT CHECKED: URL: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1000)>
+
+URL https://www.7powers.com  FLAGGED
+  script.md:41: The strategist Hamilton Helmer calls what a business needs power: the conditions that create the potential for persistent differential returns. Persistent is the word that matters. [S62] {argued: Helm
+  sources.md:42: - S62: 7powers.com, "7 Powers, synopsis", https://www.7powers.com/synopsis/ https://www.7powers.com
+  ! NOT CHECKED: URL: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1000)>
+
+URL https://techcrunch.com/2023/03/14/openai-releases-gpt-4-ai-that-it-claims-is-state-of-the-art/  FLAGGED
+  title:   "OpenAI releases GPT-4, a multimodal AI that it claims is state-of-the-art | TechCrunch"
+  page:    live
+  text:    html, 60 sentences
+  script.md:57, claim {reported: TechCrunch, Mar 2023}: "Start with the price of text. Models charge by the token, a piece of a word. GPT-4 launched in March 2023 at thirty dollars per million tokens read, and sixty per million written."
+    match: weak (best of those shown has 14% of the claim's words, 5 of them)
+    words of the claim the source never uses: 30, 60, charge, dollar, launch, mill, piece, price, written
+    > "Pricing is $0.03 per 1,000 “prompt” tokens (about 750 words) and $0.06 per 1,000 “completion” tokens (again, about 750 words)." [bm25 12.9]
+    > "Tokens represent raw text; for example, the word “fantastic” would be split into the tokens “fan,” “tas” and “tic.” Prompt tokens are the parts of words fed into GPT-4 while completion tokens are the content generated by GPT-4." [bm25 12.0]
+  script.md:59, claim {reported: eesel.ai, Sep 2026}: "GPT-6.1 Sol, from this September, lists at two and ten: six to fifteen times cheaper per token."
+    match: none (best of those shown has 13% of the claim's words, 2 of them)
+    words of the claim the source never uses: 15, 2, 6.1, cheaper, list, sol, tim
+    > "Pricing is $0.03 per 1,000 “prompt” tokens (about 750 words) and $0.06 per 1,000 “completion” tokens (again, about 750 words)." [bm25 8.8]
+    > "Tokens represent raw text; for example, the word “fantastic” would be split into the tokens “fan,” “tas” and “tic.” Prompt tokens are the parts of words fed into GPT-4 while completion tokens are the content generated by GPT-4." [bm25 5.7]
+  sources.md:43: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:59
+  ! TITLE: text has "GPT-4 launch pricing (TechCrunch) and GPT-6.1 Sol pricing (eesel.ai)"; the page does not carry it
+
+URL https://www.eesel.ai/blog/gpt-6-1-sol-pricing  ok
+  title:   "GPT-6.1 Sol pricing: API rates, cached input, and ChatGPT plans | eesel AI"
+  page:    live
+  text:    html, 264 sentences
+  script.md:57, claim {reported: TechCrunch, Mar 2023}: "Start with the price of text. Models charge by the token, a piece of a word. GPT-4 launched in March 2023 at thirty dollars per million tokens read, and sixty per million written."
+    match: weak (best of those shown has 17% of the claim's words, 5 of them)
+    words of the claim the source never uses: 2023, dollar, piece, text, word, written
+    > "The DevDay recap says "GPT-6.1 Sol Ultrafast is coming soon." Today only GPT-6 Astra has an Ultrafast price, at $60/$300 per million." [bm25 11.5]
+    > "GPT-6.1 Sol costs $2 per million input tokens and $10 per million output tokens" [bm25 10.9]
+  script.md:59, claim {reported: eesel.ai, Sep 2026}: "GPT-6.1 Sol, from this September, lists at two and ten: six to fifteen times cheaper per token."
+    match: weak (best of those shown has 35% of the claim's words, 7 of them)
+    words of the claim the source never uses: list
+    > "GPT-6.1 Sol costs $2 per million input tokens and $10 per million output tokens" [bm25 13.4]
+    > "GPT-6 Sol is a great balanced model, but it is not the only $2/$10 option." [bm25 11.1]
+  sources.md:43: reference entry, no claim to match
+
+URL https://arcprize.org/leaderboard  FLAGGED
+  title:   "ARC Prize - Leaderboard"
+  page:    live
+  text:    html, 28 sentences
+  script.md:67, claim {measured: ARC Prize leaderboard}: "In December 2024, the first model to score about seventy-six percent on the ARC reasoning test cost, at today's prices, about two hundred dollars a task."
+    match: weak (best of those shown has 17% of the claim's words, 4 of them)
+    words of the claim the source never uses: 200, 2024, 76, dollar, percent, today
+    > "1 ARC-AGI-2 score estimate based on partial testing results and o1-pro pricing." [bm25 7.3]
+    > "2 Provisional cost estimates based on Gemini 3 Pro pricing." [bm25 5.0]
+  script.md:69, claim {measured: ARC Prize leaderboard}: "Eleven months later, another model scored seventy-five percent for forty-nine cents. The same score, about four hundred times cheaper."
+    match: none (best of those shown has 5% of the claim's words, 1 of them)
+    words of the claim the source never uses: 11, 400, 49, 75, another, cent, cheaper, later, month, percent, scor, tim
+    > "1 ARC-AGI-2 score estimate based on partial testing results and o1-pro pricing." [bm25 2.6]
+    > "True intelligence isn't just about solving problems, but solving them efficiently with minimal resources." [bm25 2.2]
+  script.md:71, claim {measured: ARC Prize leaderboard}: "By September 2026 the frontier reached ninety-eight percent, at six cents a task."
+    match: none (best of those shown has 7% of the claim's words, 1 of them)
+    words of the claim the source never uses: 6, 98, cent, frontier, percent, reach, september
+    > "ARC Prize 2026 has finished." [bm25 3.3]
+    > "Results will be announced December 4, 2026." [bm25 3.3]
+  sources.md:30: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:69
+  ! NO MATCH: no sentence of the source matches the claim at script.md:71
+
+URL https://arcprize.org/blog/oai-o3-pub-breakthrough  FLAGGED
+  title:   "OpenAI o3 Breakthrough High Score on ARC-AGI-Pub | ARC Prize"
+  page:    live
+  text:    html, 119 sentences
+  script.md:67, claim {measured: ARC Prize leaderboard}: "In December 2024, the first model to score about seventy-six percent on the ARC reasoning test cost, at today's prices, about two hundred dollars a task."
+    match: weak (best of those shown has 26% of the claim's words, 5 of them)
+    words of the claim the source never uses: 200, 76
+    > "The reason why solving a single ARC-AGI task can end up taking up tens of millions of tokens and cost thousands of dollars is because this search process has to explore an enormous number of paths through program space – including backtracking." [bm25 8.8]
+    > "* Note 3/24/2025: o3 pricing costs have been updated to use o1-pro pricing." [bm25 7.8]
+  script.md:69, claim {measured: ARC Prize leaderboard}: "Eleven months later, another model scored seventy-five percent for forty-nine cents. The same score, about four hundred times cheaper."
+    match: none (best of those shown has 11% of the claim's words, 2 of them)
+    words of the claim the source never uses: 11, 49, cheaper, later
+    > "Note on "tuned": OpenAI shared they trained the o3 we tested on 75% of the Public Training set." [bm25 6.7]
+    > "A high-compute (172x) o3 configuration scored 87.5%." [bm25 6.6]
+  script.md:71, claim {measured: ARC Prize leaderboard}: "By September 2026 the frontier reached ninety-eight percent, at six cents a task."
+    match: none (best of those shown has 10% of the claim's words, 1 of them)
+    words of the claim the source never uses: 98, frontier, reach, september
+    > "ARC Prize 2026 has finished." [bm25 5.6]
+    > "Results will be announced December 4, 2026." [bm25 5.6]
+  sources.md:30: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:69
+  ! NO MATCH: no sentence of the source matches the claim at script.md:71
+
+URL https://epoch.ai/data-insights/llm-inference-price-trends  ok
+  title:   "LLM inference prices have fallen rapidly but unequally across tasks | Epoch AI"
+  page:    live
+  text:    html, 84 sentences
+  script.md:73, claim {measured: Epoch AI, Mar 2025}: "That is one test. Across many, Epoch AI found the price of a fixed level of performance falling between nine and nine hundred times a year."
+    match: weak (best of those shown has 17% of the claim's words, 4 of them)
+    words of the claim the source never uses: 900, fall, test, tim
+    > "Across all of these benchmarks and performance thresholds, we found prices declining between 9x per year and 900x per year, with a median of 50x per year." [bm25 8.6]
+    > "This suggests that the fastest trends are caused by a recent acceleration in price drops across performance levels and benchmarks." [bm25 7.3]
+  sources.md:13: reference entry, no claim to match
+
+arXiv 2603.28576  FLAGGED
+  title:   "Tiered Super-Moore's Law: Price Evolution, Production Frontiers, and Market Competition in Large Language Model Inference Services"
+  authors: Mingdeng Du
+  arXiv:   2026-03-30, 23 pages, 12 figures, 6 tables
+  text:    html, 261 sentences
+  script.md:75, claim {argued: Du, arXiv, Mar 2026}: "The best models are not getting cheaper; the same ability is."
+    match: none (best of those shown has 0% of the claim's words, 0 of them)
+    words of the claim the source never uses: ability, best, cheaper, get
+    > "Back to Abstract Download PDF" [bm25 0.0]
+    > "arXiv:2603.28576v1 [cs.CE] 30 Mar 2026" [bm25 0.0]
+  sources.md:31: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:75
+
+arXiv 2503.14499  FLAGGED
+  title:   "Measuring AI Ability to Complete Long Software Tasks"
+  authors: Thomas Kwa; Ben West; Joel Becker; Amy Deng; Katharyn Garcia; Max Hasin; Sami Jawhar; Megan Kinniment; Nate Rush; Sydney Von Arx; Ryan Bloom; Thomas Broadley; Haoxing Du; Brian Goodrich; Nikola Jurkovic; Luke Harold Miles; Seraphina Nix; Tao Lin; Chris Painter; Neev Parikh; David Rein; Lucas Jun Koba Sato; Hjalmar Wijk; Daniel M. Ziegler; Elizabeth Barnes; Lawrence Chan
+  arXiv:   2025-03-18, venue: NeurIPS 2025, v4: added Chris Painter as listed author, consistent with listing in the pdf
+  text:    html, 778 sentences
+  script.md:77, claim {measured: METR, Mar 2025}: "And the tasks got longer. In early 2025 a leading model could finish, half the time, software tasks that take a person about fifty minutes."
+    match: none (best of those shown has 15% of the claim's words, 3 of them)
+    words of the claim the source never uses: finish, got
+    > "Horizon length increases substantially over the entire time period from 2019 to early 2025." [bm25 11.4]
+    > "On these tasks, current frontier AI models such as o3 have a 50% time horizon of around 110 minutes." [bm25 10.4]
+  script.md:79, claim {reported: METR, via The Decoder}: "A model tested in March 2026 reached at least sixteen hours."
+    match: none (best of those shown has 23% of the claim's words, 2 of them)
+    > "We select 16 hours as the upper limit for SWE-bench Verified tasks, but there are only 3 tasks in this time bucket, and they do not meaningfully affect the results." [bm25 7.3]
+    > "arXiv:2503.14499v4 [cs.AI] 10 Jul 2026" [bm25 7.1]
+  script.md:163, claim {measured: METR}: "How much agency do agents have? One measure is METR's: the length of task, timed for a person, that an agent finishes alone half the time."
+    match: weak (best of those shown has 21% of the claim's words, 4 of them)
+    words of the claim the source never uses: finish, metr
+    > "Where T_{i}(1|\eta_{agent}) indicates the probability that a person with ability level \eta_{agent} answers a task correctly." [bm25 11.6]
+    > "On HCAST tasks, AI agents do perform worse on messier tasks than would be predicted from the task’s length alone (b=-0.081, R^{2} = 0.251), see Figure 13." [bm25 11.3]
+  script.md:165, claim {argued: METR, 2025}: "Fifty minutes in early 2025; at least sixteen hours in March 2026. METR's own forecast, if its results generalise: within five years, many software tasks that take a person a month."
+    match: weak (best of those shown has 24% of the claim's words, 7 of them)
+    words of the claim the source never uses: generalise, metr
+    > "If these results generalize to real-world software tasks, extrapolation of this trend predicts that within 5 years, AI systems will be capable of automating many software tasks that currently take humans a month." [bm25 19.6]
+    > "First, Ngo [29] writes that a 1-month AGI (defined as an AI that outperforms most knowledgeable humans who are given 1 month of work hours, i.e. 167 hours, to perform the task) would necessarily exceed human performance at economically valuable endeavors like writing large software applications, founding startups, and making novel scientific discoveries.88 8 Note that our forecasts concern AI with" [bm25 11.7]
+  sources.md:32: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:77
+  ! NO MATCH: no sentence of the source matches the claim at script.md:79
+  ! TITLE: text has "METR time horizons: Kwa et al. paper, Time Horizon 1.1, tracker, and The Decoder on Claude Mythos"; arXiv has "Measuring AI Ability to Complete Long Software Tasks"
+  ! AUTHORS: METR in the text, not among arXiv's: Thomas Kwa; Ben West; Joel Becker; Amy Deng; Katharyn Garcia ... (26 authors)
+
+URL https://metr.org/blog/2026-01-29-time-horizon-1-1/  FLAGGED
+  title:   "Time Horizon 1.1 - METRSubstacktwitterBluesky"
+  page:    live
+  text:    html, 95 sentences
+  script.md:77, claim {measured: METR, Mar 2025}: "And the tasks got longer. In early 2025 a leading model could finish, half the time, software tasks that take a person about fifty minutes."
+    match: none (best of those shown has 12% of the claim's words, 3 of them)
+    words of the claim the source never uses: about, finish, got, half, lead, minut, person
+    > "Early in 2025 we published our time-horizon methodology for measuring the autonomous capabilities of AI models." [bm25 8.1]
+    > "Measurements of the 50%-time-horizon of different models across different task suites and evaluation infrastructures." [bm25 6.1]
+  script.md:79, claim {reported: METR, via The Decoder}: "A model tested in March 2026 reached at least sixteen hours."
+    match: none (best of those shown has 12% of the claim's words, 1 of them)
+    words of the claim the source never uses: 16, least, reach
+    > "@misc{metr-2026-time-horizon-1-1, title = {Time Horizon 1.1}, author = {METR}, howpublished = {\url{https://metr.org/blog/2026-01-29-time-horizon-1-1/}}, year = {2026}, month = {01}, }" [bm25 4.5]
+    > "For each of the tasks we performed a paired t-test across model scores." [bm25 4.3]
+  script.md:163, claim {measured: METR}: "How much agency do agents have? One measure is METR's: the length of task, timed for a person, that an agent finishes alone half the time."
+    match: none (best of those shown has 15% of the claim's words, 3 of them)
+    words of the claim the source never uses: agency, alone, finish, half, length, much, person
+    > "@misc{metr-2026-time-horizon-1-1, title = {Time Horizon 1.1}, author = {METR}, howpublished = {\url{https://metr.org/blog/2026-01-29-time-horizon-1-1/}}, year = {2026}, month = {01}, }" [bm25 10.9]
+    > "METR studies the most advanced AI agents to understand whether their developers are on track to lose control of them." [bm25 6.4]
+  script.md:165, claim {argued: METR, 2025}: "Fifty minutes in early 2025; at least sixteen hours in March 2026. METR's own forecast, if its results generalise: within five years, many software tasks that take a person a month."
+    match: weak (best of those shown has 16% of the claim's words, 4 of them)
+    words of the claim the source never uses: 16, forecast, generalise, least, minut, own, person
+    > "@misc{metr-2026-time-horizon-1-1, title = {Time Horizon 1.1}, author = {METR}, howpublished = {\url{https://metr.org/blog/2026-01-29-time-horizon-1-1/}}, year = {2026}, month = {01}, }" [bm25 12.6]
+    > "Our original time horizon dataset, released in March 2025, showed a smooth trend with the frontier time-horizon doubling around every 7 months over the period 2019 to 2025." [bm25 9.0]
+  sources.md:32: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:77
+  ! NO MATCH: no sentence of the source matches the claim at script.md:79
+  ! NO MATCH: no sentence of the source matches the claim at script.md:163
+
+URL https://metr.org/time-horizons/  FLAGGED
+  title:   "Task-Completion Time Horizons of Frontier AI Models - METRSubstacktwitterBluesky"
+  page:    live
+  text:    html, 123 sentences
+  script.md:77, claim {measured: METR, Mar 2025}: "And the tasks got longer. In early 2025 a leading model could finish, half the time, software tasks that take a person about fifty minutes."
+    match: none (best of those shown has 15% of the claim's words, 3 of them)
+    words of the claim the source never uses: finish, got, lead
+    > "For example, the 50%-time horizon is the duration at which an agent is predicted to succeed half the time." [bm25 9.0]
+    > "In our March 2025 paper introducing time horizon, we investigated the quality of linear and hyperbolic fits for models released between early 2019 and March 2025." [bm25 7.2]
+  script.md:79, claim {reported: METR, via The Decoder}: "A model tested in March 2026 reached at least sixteen hours."
+    match: none (best of those shown has 24% of the claim's words, 2 of them)
+    words of the claim the source never uses: reach
+    > "March 3rd, 2026: Corrected a regularization mistake that affected our measurements." [bm25 7.0]
+    > "May 8th, 2026: Added Claude Mythos Preview (early) and notice that “Measurements above 16 hrs are unreliable with our current task suite.”" [bm25 5.4]
+  script.md:163, claim {measured: METR}: "How much agency do agents have? One measure is METR's: the length of task, timed for a person, that an agent finishes alone half the time."
+    match: none (best of those shown has 15% of the claim's words, 3 of them)
+    words of the claim the source never uses: agency, alone, finish
+    > "For example, the 50%-time horizon is the duration at which an agent is predicted to succeed half the time." [bm25 8.1]
+    > "Does “time horizon” mean the length of time that current AI agents can act autonomously?" [bm25 7.9]
+  script.md:165, claim {argued: METR, 2025}: "Fifty minutes in early 2025; at least sixteen hours in March 2026. METR's own forecast, if its results generalise: within five years, many software tasks that take a person a month."
+    match: weak (best of those shown has 19% of the claim's words, 5 of them)
+    words of the claim the source never uses: forecast, generalise, own
+    > "@misc{metr-2026-time-horizons, title = {Task-Completion Time Horizons of Frontier AI Models}, author = {METR}, howpublished = {\url{https://metr.org/time-horizons/}}, year = {2026}, month = {09}, }" [bm25 12.6]
+    > "In our March 2025 paper introducing time horizon, we investigated the quality of linear and hyperbolic fits for models released between early 2019 and March 2025." [bm25 10.8]
+  sources.md:32: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:77
+  ! NO MATCH: no sentence of the source matches the claim at script.md:79
+  ! NO MATCH: no sentence of the source matches the claim at script.md:163
+  ! TITLE: text has "METR time horizons: Kwa et al. paper, Time Horizon 1.1, tracker, and The Decoder on Claude Mythos"; the page does not carry it
+
+URL https://the-decoder.com/metr-says-it-can-barely-measure-claude-mythos-palo-alto-networks-warns-of-autonomous-ai-attackers/  FLAGGED
+  title:   "METR says it can barely measure Claude Mythos, Palo Alto Networks warns of autonomous AI attackers"
+  page:    live
+  text:    html, 67 sentences
+  script.md:77, claim {measured: METR, Mar 2025}: "And the tasks got longer. In early 2025 a leading model could finish, half the time, software tasks that take a person about fifty minutes."
+    match: weak (best of those shown has 20% of the claim's words, 4 of them)
+    words of the claim the source never uses: 2025, about, finish, got, half, person
+    > "That metric describes the task length at which the model has a 50 percent chance of completing a task that would take a human the specified amount of time." [bm25 11.3]
+    > "METR is working on updated methods with longer tasks, though these are still in development." [bm25 6.6]
+  script.md:79, claim {reported: METR, via The Decoder}: "A model tested in March 2026 reached at least sixteen hours."
+    match: weak (best of those shown has 40% of the claim's words, 3 of them)
+    words of the claim the source never uses: reach
+    > "The organization estimates a 50 percent time horizon of at least 16 hours, with a 95 percent confidence interval of 8.5 to 55 hours." [bm25 8.9]
+    > "According to METR, this value for Mythos is "at the upper end of what we can measure without new tasks." Of the 228 tasks in the test suite, only five are classified as 16 hours or longer." [bm25 6.1]
+  script.md:163, claim {measured: METR}: "How much agency do agents have? One measure is METR's: the length of task, timed for a person, that an agent finishes alone half the time."
+    match: none (best of those shown has 19% of the claim's words, 3 of them)
+    words of the claim the source never uses: agency, finish, half, person
+    > "Anthropic says one AI agent beats many subagents now that models can handle complexity alone" [bm25 9.3]
+    > "That metric describes the task length at which the model has a 50 percent chance of completing a task that would take a human the specified amount of time." [bm25 8.2]
+  script.md:165, claim {argued: METR, 2025}: "Fifty minutes in early 2025; at least sixteen hours in March 2026. METR's own forecast, if its results generalise: within five years, many software tasks that take a person a month."
+    match: weak (best of those shown has 18% of the claim's words, 5 of them)
+    words of the claim the source never uses: 2025, forecast, generalise, person
+    > "The organization estimates a 50 percent time horizon of at least 16 hours, with a 95 percent confidence interval of 8.5 to 55 hours." [bm25 11.3]
+    > "According to METR, this value for Mythos is "at the upper end of what we can measure without new tasks." Of the 228 tasks in the test suite, only five are classified as 16 hours or longer." [bm25 10.9]
+  sources.md:32: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:163
+  ! TITLE: text has "METR time horizons: Kwa et al. paper, Time Horizon 1.1, tracker, and The Decoder on Claude Mythos"; the page does not carry it
+
+URL https://x.com/METR_Evals/status/2052896623852929510  FLAGGED
+  title:   "METR on X: "Of the 228 tasks in our suite, only 5 are estimated as 16+ hours long, making measurements at this range unstable and less meaningful than at ranges with better task coverage. Thus, we are not highlighting exact estimates for models above 16 hours measured with our current suite." / X"
+  page:    live
+  text:    html, 17 sentences
+  script.md:77, claim {measured: METR, Mar 2025}: "And the tasks got longer. In early 2025 a leading model could finish, half the time, software tasks that take a person about fifty minutes."
+    match: none (best of those shown has 11% of the claim's words, 3 of them)
+    words of the claim the source never uses: 2025, finish, got, half, lead, minut, person, software, take
+    > "In principle the time-horizon methodology allows us to measure higher capability models by adding longer tasks, and we’re working on updated methods." [bm25 4.1]
+    > "You can find details about our measurement methodology and time-horizon estimates for other models on our website:" [bm25 3.9]
+  script.md:79, claim {reported: METR, via The Decoder}: "A model tested in March 2026 reached at least sixteen hours."
+    match: none (best of those shown has 26% of the claim's words, 2 of them)
+    words of the claim the source never uses: reach, test
+    > "We evaluated an early version of Claude Mythos Preview for risk assessment during a limited window in March 2026." [bm25 4.0]
+    > "Thus, we are not highlighting exact estimates for models above 16 hours measured with our current suite."" [bm25 2.8]
+  script.md:163, claim {measured: METR}: "How much agency do agents have? One measure is METR's: the length of task, timed for a person, that an agent finishes alone half the time."
+    match: none (best of those shown has 9% of the claim's words, 3 of them)
+    words of the claim the source never uses: 1, agency, agent, alone, finish, half, length, person, tim
+    > "In principle the time-horizon methodology allows us to measure higher capability models by adding longer tasks, and we’re working on updated methods." [bm25 3.3]
+    > "We believe that this task suite could still distinguish a much more capable model from current publicly-known state-of-the-art models." [bm25 3.3]
+  script.md:165, claim {argued: METR, 2025}: "Fifty minutes in early 2025; at least sixteen hours in March 2026. METR's own forecast, if its results generalise: within five years, many software tasks that take a person a month."
+    match: weak (best of those shown has 14% of the claim's words, 5 of them)
+    words of the claim the source never uses: 2025, forecast, generalise, many, minut, month, own, person, software, take, year
+    > "METR on X: "Of the 228 tasks in our suite, only 5 are estimated as 16+ hours long, making measurements at this range unstable and less meaningful than at ranges with better task coverage." [bm25 6.4]
+    > "We evaluated an early version of Claude Mythos Preview for risk assessment during a limited window in March 2026." [bm25 6.2]
+  sources.md:32: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:77
+  ! NO MATCH: no sentence of the source matches the claim at script.md:79
+  ! NO MATCH: no sentence of the source matches the claim at script.md:163
+  ! TITLE: text has "METR time horizons: Kwa et al. paper, Time Horizon 1.1, tracker, and The Decoder on Claude Mythos"; the page does not carry it
+
+URL https://martinalderson.com/posts/attack-of-the-clones/  FLAGGED
+  title:   "Attack of the SaaS clones - Martin Alderson"
+  page:    live
+  text:    html, 94 sentences
+  script.md:81, claim {reported: Martin Alderson, Feb 2026}: "So a rebuild is now a task. One engineer cloned the core of the project tracker Linear from its network traffic, incomplete but working: twenty prompts, a couple of evenings, on a two-hundred-dollar monthly plan."
+    match: weak (best of those shown has 19% of the claim's words, 5 of them)
+    words of the claim the source never uses: incomplete, plan, rebuild, task, tracker, traffic
+    > "I cloned most of Linear's core functionality in 20 prompts using Claude Code." [bm25 18.4]
+    > "Building a Linear alternative in 20 prompts" [bm25 11.1]
+  script.md:99, claim {reported: Martin Alderson, Feb 2026}: "Secret code goes first. The Linear clone needed no source code at all, only what the app sends over the network."
+    match: none (best of those shown has 19% of the claim's words, 3 of them)
+    words of the claim the source never uses: goe, secret, source
+    > "Firstly, I opened my web browser with DevTools open, and browsed the platform, collecting all the network traces." [bm25 8.3]
+    > "If you found this useful, I send a newsletter every month with all my posts." [bm25 6.6]
+  script.md:117, claim {argued: Martin Alderson}: "Liability: a vendor can sign an indemnity and carry insurance; a weekend clone usually has nobody behind it to do either."
+    match: weak (best of those shown has 27% of the claim's words, 4 of them)
+    words of the claim the source never uses: behind, either, indemnity, nobody, sign, weekend
+    > "Established vendors can take on contractual liability for data breaches, offer indemnification clauses, carry millions in cyber insurance, and back it all up with SOC2 audits and compliance certifications." [bm25 10.7]
+    > "And most SaaS contracts cap liability at fees paid, so even if a vendor successfully enforced a ToS breach, the damages from a $20/month subscription aren't exactly a deterrent." [bm25 4.8]
+  sources.md:6: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:99
+
+URL https://blog.cloudflare.com/vinext/  ok
+  title:   "How we rebuilt Next.js with AI in one week | Cloudflare Blog"
+  page:    live
+  text:    html, 225 sentences
+  script.md:83, claim {reported: Cloudflare, Feb 2026}: "In February 2026, Cloudflare said one of its engineers, directing AI, rebuilt the interface of Next.js, a popular web framework, in under a week, for about eleven hundred dollars in tokens."
+    match: weak (best of those shown has 32% of the claim's words, 7 of them)
+    words of the claim the source never uses: dollar
+    > "Last week, one engineer and an AI model rebuilt the most popular front-end framework from scratch." [bm25 21.9]
+    > "How we rebuilt Next.js with AI in one week" [bm25 20.2]
+  script.md:85, claim {reported: via OfficeChai, Feb 2026}: "Two days later, the CEO of Vercel, the company behind Next.js, said it had found seven security flaws in that rebuild, and posted a guide to moving from Cloudflare to Vercel."
+    match: weak (best of those shown has 18% of the claim's words, 5 of them)
+    words of the claim the source never uses: ceo, flaw, guide, later, mov, security, vercel
+    > "That said, if one engineer can spend $1,100 in tokens and rebuild Next.js, you can probably spend $10 and migrate to a Vite-based framework designed specifically for static content, like Astro (which also deploys to Cloudflare Workers)." [bm25 8.0]
+    > "vinext (Vite 7 / Rollup)" [bm25 6.5]
+  sources.md:47: reference entry, no claim to match
+
+URL https://officechai.com/ai/after-cloudflare-created-vercels-next-js-in-a-week-using-ai-vercel-discloses-7-bugs-in-the-new-framework  ok
+  title:   "After Cloudflare Created Vercel's Next.js In A Week Using AI, Vercel Discloses 7 Bugs In The New Framework"
+  page:    live
+  text:    html, 58 sentences
+  script.md:83, claim {reported: Cloudflare, Feb 2026}: "In February 2026, Cloudflare said one of its engineers, directing AI, rebuilt the interface of Next.js, a popular web framework, in under a week, for about eleven hundred dollars in tokens."
+    match: weak (best of those shown has 36% of the claim's words, 8 of them)
+    words of the claim the source never uses: dollar, interface, token
+    > "The ink was barely dry on Cloudflare’s announcement that it had rebuilt the most popular web framework in existence using AI — in one week, for $1,100 — but Vercel’s CEO has fired back." [bm25 17.7]
+    > "A one-week, $1,100 framework is the beginning of that story, not the end." [bm25 11.9]
+  script.md:85, claim {reported: via OfficeChai, Feb 2026}: "Two days later, the CEO of Vercel, the company behind Next.js, said it had found seven security flaws in that rebuild, and posted a guide to moving from Cloudflare to Vercel."
+    match: weak (best of those shown has 23% of the claim's words, 5 of them)
+    words of the claim the source never uses: behind, day, later, rebuild
+    > "This is not the first time the two companies have clashed over Next.js security." [bm25 11.7]
+    > "That said, the vulnerabilities are real. Seven is not a trivial number for a framework not yet a week old, and the two critical-rated flaws in particular demand a straightforward response from Cloudflare." [bm25 10.1]
+  sources.md:47: reference entry, no claim to match
+
+URL https://www.pymnts.com/news/artificial-intelligence/2026/smbs-swap-pricey-saas-contracts-for-ai-built-apps/  ok
+  title:   "PYMNTS | SMBs Swap Pricey SaaS Contracts for AI-Built Apps"
+  page:    live
+  text:    html, 51 sentences
+  script.md:89, claim {reported: PYMNTS, via The Information}: "Five small firms told The Information they dropped Salesforce and HubSpot contracts for tools they built with AI, and cut software costs by forty to eighty percent."
+    match: weak (best of those shown has 46% of the claim's words, 9 of them)
+    words of the claim the source never uses: drop
+    > "The firms cut their software costs by 40% to 80%." [bm25 22.3]
+    > "Five startups and small companies with staff ranging from 20 to 70 people ended contracts with Salesforce and HubSpot over the past six months in favor of applications they built themselves using AI tools from Anthropic, Lovable and Replit, The Information reported." [bm25 14.3]
+  sources.md:33: reference entry, no claim to match
+
+URL https://martinalderson.com/posts/has-the-cost-of-software-just-dropped-90-percent/  FLAGGED
+  title:   "Has the cost of building software just dropped 90%? - Martin Alderson"
+  page:    live
+  text:    html, 77 sentences
+  script.md:93, claim {argued: Alderson; Marmelab; Fawcett}: "What did not get cheap is deciding what to build, proving the rebuild does what the original did, and keeping it running for years."
+    match: none (best of those shown has 12% of the claim's words, 2 of them)
+    words of the claim the source never uses: cheap, decid, keep, original, prov, rebuild, run
+    > "I've been building software professionally for nearly 20 years." [bm25 5.9]
+    > "Let's say they get a quote from an agency to build one into an app for $50k - only essential ones meet the grade." [bm25 4.7]
+  sources.md:10: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:93
+
+URL https://marmelab.com/blog/2026/03/20/software-will-never-die.html  FLAGGED
+  title:   "Software Developers Will Never Die"
+  page:    live
+  text:    html, 135 sentences
+  script.md:93, claim {argued: Alderson; Marmelab; Fawcett}: "What did not get cheap is deciding what to build, proving the rebuild does what the original did, and keeping it running for years."
+    match: none (best of those shown has 17% of the claim's words, 2 of them)
+    words of the claim the source never uses: keep
+    > "Code Is Cheap, Trust Is Not" [bm25 6.5]
+    > "Anyway, Cindy decided to use Atomic CRM as a blueprint to rebuild a CRM from the ground up, but with a different technology." [bm25 6.0]
+  sources.md:11: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:93
+
+arXiv 2608.23616  FLAGGED
+  title:   "Rebuild Dossier: Mechanically-Enforced Specs for Agentic App Rebuilds, and What Model-Tier Failures Reveal"
+  authors: Parker Fawcett
+  arXiv:   2026-08-22, 48 pages, 1 figure. Code and evaluation artifacts: https://github.com/Parker-Fawcett/rebuild-dossier (archived at DOI: 10.5281/zenodo.22036801)
+  text:    html, 766 sentences
+  script.md:93, claim {argued: Alderson; Marmelab; Fawcett}: "What did not get cheap is deciding what to build, proving the rebuild does what the original did, and keeping it running for years."
+    match: none (best of those shown has 23% of the claim's words, 2 of them)
+    > "Practically: a route can only land in the blocklist by failing hard enough to never get a test generated at all, not by generating one that later proves weak — a narrower bar than “any bad test still counts,” and why a page engineered merely slow, rather than uncapturable, will never appear there." [bm25 8.0]
+    > "Solid, behavioral, test-verified: on a blind fresh-agent build of a purpose-built app, the agent again avoided literal-value gaming — given captured values in the assertions, it built a shared module computing them from a fixed anchor year rather than hardcoding fixtures." [bm25 7.1]
+  sources.md:12: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:93
+
+URL https://www.ability.ai/blog/ai-software-economics-moats  FLAGGED
+  title:   "AI software economics: why traditional SaaS moats are dead"
+  page:    live
+  text:    html, 143 sentences
+  script.md:101, claim {argued: Ability.ai, which sells agents}: "Switching costs built on friction go with it: a familiar interface, data that is hard to export, a migration nobody wants to run."
+    match: none (best of those shown has 15% of the claim's words, 3 of them)
+    words of the claim the source never uses: export, familiar, go, hard, nobody, switch, want
+    > "SaaS companies historically relied on three moats: migration friction, data lock-in, and UI familiarity." [bm25 9.5]
+    > "Managed servicesYour company's AI, built and run by usWe build it, run it and host it on infrastructure you own." [bm25 8.7]
+  script.md:105, claim {argued: Ability.ai}: "Agents mostly use your API, not your screens; and pricing per seat weakens when one agent does the work of several users."
+    match: weak (best of those shown has 37% of the claim's words, 5 of them)
+    words of the claim the source never uses: most, several
+    > "When the primary software user is an agent instead of a human, per-seat pricing and UI stickiness lose their defensive value." [bm25 15.5]
+    > "Traditional SaaS advantages like UI lock-in and data moats are collapsing because AI agents bypass user interfaces entirely and interact via APIs." [bm25 6.8]
+  sources.md:3: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:101
+
+URL https://a16z.com/the-empty-promise-of-data-moats/  FLAGGED
+  title:   "The Empty Promise of Data Moats | Andreessen Horowitz"
+  page:    live
+  text:    html, 181 sentences
+  script.md:107, claim {argued: a16z, 2019}: "A pile of data on its own is a scale effect. Its edge fades as rivals catch up."
+    match: none (best of those shown has 21% of the claim's words, 3 of them)
+    words of the claim the source never uses: fad, pile, rival
+    > "Generating synthetic data is another approach to catch up with incumbents housing large tracks of data." [bm25 9.0]
+    > "Instead of getting stronger, the defensible moat erodes as the data corpus grows and the competition races to catch up." [bm25 8.0]
+  sources.md:8: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:107
+
+URL https://www.harbourvest.com/insights-news/insights/software-industry-great-reset-the-new-moat-that-matters/  FLAGGED
+  title:   "The Software Industry’s Great Reset and the New Moat That Matters"
+  page:    live, moved to https://www.harbourvest.com/us/en/insights/market-commentary/2026/software-industry-great-reset-the-new-moat-that-matters
+  text:    html, 174 sentences
+  script.md:111, claim {argued: HarbourVest, Feb 2026}: "Being the system of record: the place that holds a customer's own data and runs their critical work."
+    match: none (best of those shown has 26% of the claim's words, 3 of them)
+    words of the claim the source never uses: being, place
+    > "Hold proprietary, customer-specific operational data" [bm25 13.8]
+    > "Winners: Systems that own core operational data layers or are an irreplaceable backbone for companies." [bm25 9.5]
+  sources.md:5: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:111
+
+URL https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps  ok
+  title:   "Rate limit changes for non-Marketplace apps | Slack Developer Docs"
+  page:    a plain fetch read no sentence; read in the web toolkit's browser
+  text:    page, 81 sentences
+  script.md:113, claim {reported: Slack changelog, May 2025}: "And the owner of that record decides who may read it. In May 2025, Slack cut new outside apps that are not in its marketplace from a thousand messages per request to fifteen, at one request a minute, citing security."
+    match: weak (best of those shown has 31% of the claim's words, 7 of them)
+    words of the claim the source never uses: cit, cut, decid, record
+    > "The new rate limits will be updated to allow 1 request per minute and will return a maximum of 15 objects per request." [bm25 16.4]
+    > "To help keep workspace data secure and prevent bulk data exfiltration by unvetted applications, these methods will have a new rate limit of 15 messages per request at one request per minute." [bm25 16.3]
+  sources.md:48: reference entry, no claim to match
+
+URL https://stroupaloop.com/blog/2026/04/12/when-code-gets-cheap-scarcity-moves/  FLAGGED
+  title:   "When Code Gets Cheap, Scarcity Moves — Andrew Stroup"
+  page:    live
+  text:    html, 177 sentences
+  script.md:115, claim {argued: Andrew Stroup, Apr 2026}: "Licences, audits and compliance, which take years to earn. And moving money."
+    match: none (best of those shown has 29% of the claim's words, 3 of them)
+    words of the claim the source never uses: earn, licenc
+    > "They moved toward money movement, compliance, and infrastructure." [bm25 10.0]
+    > "Moving money is not a feature." [bm25 8.6]
+  sources.md:4: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:115
+
+URL https://www.semafor.com/article/03/12/2026/ceos-all-think-they-have-an-ai-moat-just-ask-them  ok
+  title:   "CEOs all think they have an AI ‘moat.’ Just ask them. | Semafor"
+  page:    live
+  text:    html, 18 sentences
+  script.md:119, claim {measured: AlphaSense count, via Semafor}: "Everyone now claims a moat. In the first quarter of 2026, with weeks still to go, at least a hundred and eighteen companies had talked about an AI moat on their earnings calls, a record."
+    match: weak (best of those shown has 21% of the claim's words, 6 of them)
+    words of the claim the source never uses: call, claim, everyone, first, go, still, talk
+    > "CEOs have a new favorite word: “moat.” At least 118 companies touted the moats they have, or are building, against AI this quarter, AlphaSense data shows." [bm25 10.4]
+    > "That’s a record, and the quarter isn’t over yet." [bm25 5.6]
+  sources.md:25: reference entry, no claim to match
+
+URL https://www.nfx.com/post/network-effects-manual  ok
+  title:   "The Network Effects Manual: 16 Different Network Effects (and counting)"
+  page:    live
+  text:    html, 440 sentences
+  script.md:125, claim {argued: NFX}: "A network effect is when a product is worth more to each user because other people use it."
+    match: weak (best of those shown has 55% of the claim's words, 5 of them)
+    > "Like digital network effects, these social nfx can help create more value in your product for users the more people use it." [bm25 9.2]
+    > "The strongest, simplest network effects are direct: increased usage of a product leads to a direct increase in the value of that product to its users." [bm25 7.7]
+  sources.md:7: reference entry, no claim to match
+
+URL https://en.wikipedia.org/wiki/Network_effect  FLAGGED
+  title:   "Network effect - Wikipedia"
+  page:    live
+  text:    html, 345 sentences
+  script.md:125, claim {argued: NFX}: "A network effect is when a product is worth more to each user because other people use it."
+    match: weak (best of those shown has 52% of the claim's words, 5 of them)
+    words of the claim the source never uses: worth
+    > "This is because network effects tend to incentivise users to coordinate their adoption of a single product." [bm25 11.1]
+    > "The application of credit cards is related to external network effects, because once established as a payment method, more people use credit cards." [bm25 8.2]
+  sources.md:7: reference entry, no claim to match
+  ! TITLE: text has "The Network Effects Manual"; the page does not carry it
+
+URL https://ppc.land/stack-overflow-drops-to-1-442-questions-in-july-down-99-from-2014-peak/  ok
+  title:   "Stack Overflow drops to 1,442 questions in July, down 99% from 2014 peak"
+  page:    live
+  text:    html, 179 sentences
+  script.md:129, claim {measured: Stack Exchange data, via PPC Land}: "New questions peaked at about two hundred and seven thousand a month in 2014."
+    match: weak (best of those shown has 41% of the claim's words, 4 of them)
+    words of the claim the source never uses: 207000
+    > "March 2014: monthly questions peak at 207,204" [bm25 12.2]
+    > "Monthly peak hit 207,204 in March 2014." [bm25 9.6]
+  script.md:131, claim {measured: Stack Exchange data, via PPC Land}: "In July 2026 there were about fourteen hundred (new questions, not users)."
+    match: weak (best of those shown has 42% of the claim's words, 4 of them)
+    words of the claim the source never uses: 1400
+    > "Stack Overflow recorded 1,442 new questions in July 2026, according to query results from the platform's own Stack Exchange Data Explorer." [bm25 8.0]
+    > "The Wikipedia entry on Stack Overflow, last edited on 21 July 2026, states that questions submitted by users fell 78% between December 2024 and December 2025." [bm25 7.4]
+  sources.md:34: reference entry, no claim to match
+
+URL https://blog.pragmaticengineer.com/stack-overflow-is-almost-dead  ok
+  title:   "Stack overflow is almost dead - The Pragmatic Engineer"
+  page:    live
+  text:    html, 60 sentences
+  script.md:133, claim {reported: Pragmatic Engineer, May 2025}: "The fall began years earlier, and sped up as soon as ChatGPT came out."
+    match: weak (best of those shown has 33% of the claim's words, 4 of them)
+    words of the claim the source never uses: began, earlier, sped
+    > "November 2022: as soon as ChatGPT came out, the number of questions asked declined rapidly." [bm25 11.6]
+    > "Even though we did not know at the time, this was stilll two years from ChatGPT launching!" [bm25 6.0]
+  sources.md:35: reference entry, no claim to match
+
+URL https://stackoverflow.co/company/press/archive/openai-partnership  ok
+  title:   "Stack Overflow and OpenAI Partner to Strengthen the World’s Most Popular Large Language Models - Press release - Stack Overflow"
+  page:    live
+  text:    html, 21 sentences
+  script.md:135, claim {reported: Stack Overflow, May 2024}: "Stack Overflow now gives AI companies, OpenAI among them, access to its answers."
+    match: weak (best of those shown has 24% of the claim's words, 4 of them)
+    words of the claim the source never uses: among, now
+    > "OpenAI is an AI research and deployment company." [bm25 6.7]
+    > "Across its public and private platforms, Stack Overflow empowers developer communities to discover the information, answers, and learning opportunities they need – when they need them." [bm25 5.4]
+  sources.md:36: reference entry, no claim to match
+
+URL https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/  FLAGGED
+  title:   "Meta - Meta Reports Third Quarter 2026 Results"
+  page:    live
+  text:    html, 159 sentences
+  script.md:145, claim {measured: Meta, Q3 2026}: "Meta's apps are used by three point six billion people a day. A clone of the app has none of them."
+    match: none (best of those shown has 17% of the claim's words, 2 of them)
+    words of the claim the source never uses: 6000000000, clone, day, none, them
+    > "Family daily active people (DAP) – DAP was 3.64 billion on average for September 2026, an increase of 3% year-over-year." [bm25 7.0]
+    > "Three Months Ended September 30," [bm25 5.5]
+  sources.md:37: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:145
+
+URL https://www.pjm.com/-/media/about-pjm/newsroom/fact-sheets/pjm-governing-documents-fact-sheet.pdf  FLAGGED
+  page:    live, moved to https://www.pjm.com/-/media/DotCom/about-pjm/newsroom/fact-sheets/pjm-governing-documents-fact-sheet.pdf
+  text:    pdf, 31 sentences
+  script.md:147, claim {measured: PJM}: "To join PJM, the grid operator for thirteen states and Washington DC, a company must sign its operating agreement. Eleven hundred members, serving more than sixty-seven million people, are bound by it."
+    match: weak (best of those shown has 20% of the claim's words, 7 of them)
+    words of the claim the source never uses: 1100, 13, 67000000, bound, dc, join, people, stat, washington
+    > "Operating Agreement To become a member of PJM, an organization must sign the Operating Agreement." [bm25 10.3]
+    > "Reliability Assurance Agreement The Reliability Assurance Agreement establishes the obligations and standards for maintaining the reliable operation of the electric grid in the PJM territory and must be signed by every Load Serving Entity in the PJM region." [bm25 8.7]
+  sources.md:38, claim: "- S58: PJM Interconnection, "PJM governing documents fact sheet; PJM 2025 annual report, "PJM by the numbers"","
+    match: weak (best of those shown has 18% of the claim's words, 4 of them)
+    words of the claim the source never uses: 2025, annual, fact, number, report, s58, sheet
+    > "It also establishes the Office of the Interconnection, which carries out the provisions of the governing documents in managing PJM’s operations, markets and planning." [bm25 6.4]
+    > "Governing Documents: Defining How PJM Operates" [bm25 4.7]
+  ! QUOTE: not in the source's text: "PJM governing documents fact sheet; PJM 2025 annual report,"
+
+URL https://services.pjm.com/annualreport2025/pjm-by-the-numbers/  FLAGGED
+  title:   "PJM by the Numbers - PJM Annual Report 2025"
+  page:    a plain fetch read no sentence; read in the web toolkit's browser
+  text:    page, 4 sentences
+  script.md:147, claim {measured: PJM}: "To join PJM, the grid operator for thirteen states and Washington DC, a company must sign its operating agreement. Eleven hundred members, serving more than sixty-seven million people, are bound by it."
+    match: none (best of those shown has 7% of the claim's words, 3 of them)
+    words of the claim the source never uses: 1100, 67000000, agreement, bound, company, dc, grid, join, member, must, operat, operator, people, sign, washington
+    > "States Served 67+ Million Population Served 1,116 Membership Welcome Board Letter Working to Perfect the Flow of Energy® For information, please contact: [a phone number, left out] • PJM.com “PJM” and “Working to Perfect the Flow of Energy” are registered trademarks of PJM Interconnection, L.L.C." [bm25 2.7]
+    > "185,989 MW Generation Capacity 165,563 MW Peak Demand $80.5 Billion Annual Billings 828,161 GWh Annual Energy 88,417 Miles Transmission Lines (Bulk Electric System) 368,906 Square Miles of Territory 13 + D.C." [bm25 0.9]
+  sources.md:38, claim: "- S58: PJM Interconnection, "PJM governing documents fact sheet; PJM 2025 annual report, "PJM by the numbers"","
+    match: none (best of those shown has 8% of the claim's words, 2 of them)
+    words of the claim the source never uses: 2025, document, fact, govern, report, s58, sheet
+    > "MENU PJM by the Numbers" [bm25 2.5]
+    > "185,989 MW Generation Capacity 165,563 MW Peak Demand $80.5 Billion Annual Billings 828,161 GWh Annual Energy 88,417 Miles Transmission Lines (Bulk Electric System) 368,906 Square Miles of Territory 13 + D.C." [bm25 1.4]
+  ! NO MATCH: no sentence of the source matches the claim at script.md:147
+  ! QUOTE: not in the source's text: "PJM governing documents fact sheet; PJM 2025 annual report,"
+
+URL https://www.pjm.com/about-pjm/who-we-are  FLAGGED
+  title:   "PJM - Who We Are"
+  page:    live
+  text:    html, 30 sentences
+  script.md:147, claim {measured: PJM}: "To join PJM, the grid operator for thirteen states and Washington DC, a company must sign its operating agreement. Eleven hundred members, serving more than sixty-seven million people, are bound by it."
+    match: weak (best of those shown has 13% of the claim's words, 4 of them)
+    words of the claim the source never uses: 1100, 13, 67000000, bound, company, dc, join, must, sign, washington
+    > "Acting as a neutral, independent party, PJM operates a competitive wholesale electricity market and manages the high-voltage electricity grid to ensure reliability for more than 67 million people." [bm25 6.7]
+    > "PJM was a founding member of the organization in 2004, served as President in 2013, and continues as a member today." [bm25 6.6]
+  sources.md:38, claim: "- S58: PJM Interconnection, "PJM governing documents fact sheet; PJM 2025 annual report, "PJM by the numbers"","
+    match: none (best of those shown has 16% of the claim's words, 3 of them)
+    words of the claim the source never uses: 2025, document, fact, govern, number, s58, sheet
+    > "An overview of PJM is available, along with the latest Annual Report." [bm25 7.8]
+    > "The focus of PJM-EIS is to provide the reporting and data tracking services of both emissions and renewable energy credits also known as renewable energy certificates." [bm25 2.8]
+  ! QUOTE: not in the source's text: "PJM governing documents fact sheet; PJM 2025 annual report,"
+
+URL https://oreilly.com/library/view/disruptive-innovation-the/9781422189986/Text/InnovatorsSolu_chap-6.html  FLAGGED
+  page:    refused a plain fetch (HTTP 403); read in the web toolkit's browser
+  text:    page, 32 sentences
+  script.md:155, claim {argued: Christensen, 2003, a snippet}: "Clayton Christensen argued that when one layer of a business becomes a commodity, the chance to earn good profits usually moves to the layer next to it."
+    match: none (best of those shown has 11% of the claim's words, 3 of them)
+    words of the claim the source never uses: argu, becom, chance, commodity, earn, good, layer, mov, next, profit, usual
+    > "Christensen, and Henning Kagermann) Harvard Business Review, Clayton M." [bm25 7.3]
+    > "(Harvard Business Review Classics) Clayton M." [bm25 5.6]
+  sources.md:44: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:155
+  ! TITLE: text has "The Innovator's Solution, chapter 6: the law of conservation of attractive profits"; the page does not carry it
+
+URL https://foundationcapital.com/ai-service-as-software/  ok
+  title:   "AI leads a service as software paradigm shift - Foundation Capital"
+  page:    live, moved to https://foundationcapital.com/ideas/ai-leads-a-service-as-software-paradigm-shift
+  text:    html, 89 sentences
+  script.md:161, claim {argued: Foundation Capital, Nov 2026}: "Foundation Capital, a venture firm that invests in replacing it, puts the salaries and outsourced services spent on that kind of work at four point six trillion dollars, against about one trillion for all public enterprise software companies together."
+    match: weak (best of those shown has 15% of the claim's words, 6 of them)
+    words of the claim the source never uses: 6, against, firm, kind, put, replac, together, venture
+    > "The total public market cap of enterprise software companies exceeds $1 trillion." [bm25 16.1]
+    > "The amount spent on outsourced services and salaries—both IT services and business process services ($2.3 trillion, per Gartner)" [bm25 11.1]
+  sources.md:45: reference entry, no claim to match
+
+URL https://www.nber.org/papers/w34468  ok
+  title:   "The Coasean Singularity? Demand, Supply, and Market Design with AI Agents | NBERNBER: National Bureau of Economic Research"
+  page:    live
+  text:    html, 31 sentences
+  script.md:171, claim {argued: Shahidi et al., NBER, 2025}: "Agency gets devalued from both sides. Economists writing for the National Bureau of Economic Research argue that agents will search, negotiate and transact for us, cutting the cost of using a market."
+    match: weak (best of those shown has 20% of the claim's words, 6 of them)
+    words of the claim the source never uses: agency, argue, cut, devalu, economist, get, sid, us, writ
+    > "This chapter evaluates the economic implications of this transition, adopting a consumer-oriented view of agents as market participants that can search, negotiate, and transact directly." [bm25 9.8]
+    > "The views expressed in this chapter are solely those of the authors and do not reflect the views of Amazon Inc. or the National Bureau of Economic Research." [bm25 8.4]
+  sources.md:39: reference entry, no claim to match
+
+URL https://corporate.visa.com/en/sites/visa-perspectives/press-releases/product-drop-intelligent-commerce.html  FLAGGED
+  title:   "Find and buy with AI | Visa"
+  page:    live
+  text:    html, 35 sentences
+  script.md:185, claim {reported: Visa; Mastercard; Google, 2025}: "Look at how agents are being allowed to pay. Visa, Mastercard and Google each announced a way in 2025: the person sets the limits, Google's version has them sign a mandate, and Mastercard lets only registered, verified agents pay."
+    match: weak (best of those shown has 12% of the claim's words, 4 of them)
+    words of the claim the source never uses: 2025, announc, being, google, let, look, mandate, mastercard, person, register, them, verifi, vers
+    > "Simple and secure AI payments: Allows consumers to easily set spending limits and conditions, providing clear guidelines for agent transactions." [bm25 8.6]
+    > "Each consumer sets the limits, and Visa helps manage the rest.”" [bm25 7.2]
+  sources.md:49: reference entry, no claim to match
+  ! TITLE: text has "Agent payments announcements: Visa Intelligent Commerce, Mastercard Agent Pay, Google AP2"; the page does not carry it
+
+URL https://newsroom.mastercard.com/news/press/2025/april/mastercard-unveils-agent-pay-pioneering-agentic-payments-technology-to-power-commerce-in-the-age-of-ai  FLAGGED
+  title:   "Mastercard unveils Agent Pay, pioneering agentic payments technology to power commerce in the age of AI | Mastercard Newsroom"
+  page:    live
+  text:    html, 36 sentences
+  script.md:185, claim {reported: Visa; Mastercard; Google, 2025}: "Look at how agents are being allowed to pay. Visa, Mastercard and Google each announced a way in 2025: the person sets the limits, Google's version has them sign a mandate, and Mastercard lets only registered, verified agents pay."
+    match: none (best of those shown has 10% of the claim's words, 3 of them)
+    words of the claim the source never uses: 2025, google, let, limit, look, mandate, person, sign, them, vers, visa
+    > "Securely registering and authenticating trusted agents: The program will require trusted AI agents to be registered and verified, after which they will be able to make secure payments on behalf of their users." [bm25 8.6]
+    > "Mastercard today announced the launch of its Agentic Payments Program, Mastercard Agent Pay." [bm25 7.9]
+  sources.md:49: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:185
+  ! TITLE: text has "Agent payments announcements: Visa Intelligent Commerce, Mastercard Agent Pay, Google AP2"; the page does not carry it
+
+URL https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol  FLAGGED
+  title:   "Announcing Agent Payments Protocol (AP2) | Google Cloud Blog"
+  page:    a plain fetch read no sentence; read in the web toolkit's browser
+  text:    page, 104 sentences
+  script.md:185, claim {reported: Visa; Mastercard; Google, 2025}: "Look at how agents are being allowed to pay. Visa, Mastercard and Google each announced a way in 2025: the person sets the limits, Google's version has them sign a mandate, and Mastercard lets only registered, verified agents pay."
+    match: none (best of those shown has 9% of the claim's words, 3 of them)
+    words of the claim the source never uses: look, person, register, set, them, vers, visa
+    > "This mandate specifies the rules of engagement—price limits, timing, and other conditions." [bm25 9.9]
+    > "It serves as verifiable, pre-authorized proof that can allow the agent to automatically generate a Cart Mandate on your behalf once your precise conditions are met." [bm25 8.0]
+  sources.md:49, claim: "- S69: Visa; Mastercard; Google Cloud, "Agent payments announcements: Visa Intelligent Commerce, Mastercard Agent Pay, Google AP2","
+    match: weak (best of those shown has 18% of the claim's words, 4 of them)
+    words of the claim the source never uses: announcement, intelligent, s69, visa
+    > "Nexi: “We are delighted to partner with Google Cloud on AP2 in order to contribute to shape a fundamental paradigm shift in commerce." [bm25 7.9]
+    > "Accenture: “Google Cloud's Agent Payments Protocol (AP2) complements the Agent2Agent protocol and Model Context Protocol to provide a unified framework for agents to transact." [bm25 7.5]
+  ! NO MATCH: no sentence of the source matches the claim at script.md:185
+  ! QUOTE: not in the source's text: "Agent payments announcements: Visa Intelligent Commerce, Mastercard Agent Pay, Google AP2"
+
+URL https://ap2-protocol.org  FLAGGED
+  title:   "AP2 - Agent Payments Protocol Documentation"
+  page:    live
+  text:    html, 52 sentences
+  script.md:185, claim {reported: Visa; Mastercard; Google, 2025}: "Look at how agents are being allowed to pay. Visa, Mastercard and Google each announced a way in 2025: the person sets the limits, Google's version has them sign a mandate, and Mastercard lets only registered, verified agents pay."
+    match: none (best of those shown has 5% of the claim's words, 2 of them)
+    words of the claim the source never uses: announc, being, google, let, look, mastercard, pay, person, register, set, them, verifi, visa, way
+    > "Agent Payments Protocol Announcement (9/16/2025)" [bm25 5.3]
+    > "This ambiguity creates a crisis of trust that could significantly limit adoption." [bm25 4.2]
+  sources.md:49, claim: "- S69: Visa; Mastercard; Google Cloud, "Agent payments announcements: Visa Intelligent Commerce, Mastercard Agent Pay, Google AP2","
+    match: none (best of those shown has 13% of the claim's words, 3 of them)
+    words of the claim the source never uses: cloud, google, intelligent, mastercard, pay, s69, visa
+    > "Agent Payments Protocol Announcement (9/16/2025)" [bm25 6.3]
+    > "The Agent Payments Protocol provides a mechanism for secure payments, and it's part of a larger picture to unlock the full potential of agent-enabled commerce." [bm25 4.2]
+  ! NO MATCH: no sentence of the source matches the claim at script.md:185
+  ! QUOTE: not in the source's text: "Agent payments announcements: Visa Intelligent Commerce, Mastercard Agent Pay, Google AP2"
+
+URL https://www.europarl.europa.eu/doceo/document/TA-8-2017-0051_EN.html  ok
+  page:    refused a plain fetch (HTTP 403); read in the web toolkit's browser
+  text:    page, 201 sentences
+  script.md:189, claim {reported: EU Parliament, 2017; EAPIL, Oct 2025}: "What would change that: agents given legal standing of their own, or power and hardware becoming plentiful. The European Parliament floated electronic persons in 2017; in 2025 the EU withdrew even its proposed AI liability rules, and I found no country that lets an agent be the party held liable."
+    match: weak (best of those shown has 11% of the claim's words, 5 of them)
+    words of the claim the source never uses: 2025, change, country, float, held, let, plentiful, power, withdrew
+    > "AE. whereas according to the current legal framework for product liability - where the producer of a product is liable for a malfunction- and rules governing liability for harmful actions -where the user of a product is liable for a behaviour that leads to harm- apply to damages caused by robots or AI;" [bm25 14.4]
+    > "European Parliament resolution of 16 February 2017 with recommendations to the Commission on Civil Law Rules on Robotics (2015/2103(INL))" [bm25 13.0]
+  sources.md:50: reference entry, no claim to match
+
+URL https://eapil.org/2025/10/09/european-commission-withdraws-two-proposals-assignments-of-claims-regulation-and-ai-liability-directive/  ok
+  title:   "European Commission Withdraws Proposals on Assignments of Claims and AI Liability – EAPILClick to open the search input fieldScroll to top"
+  page:    live
+  text:    html, 12 sentences
+  script.md:189, claim {reported: EU Parliament, 2017; EAPIL, Oct 2025}: "What would change that: agents given legal standing of their own, or power and hardware becoming plentiful. The European Parliament floated electronic persons in 2017; in 2025 the EU withdrew even its proposed AI liability rules, and I found no country that lets an agent be the party held liable."
+    match: weak (best of those shown has 9% of the claim's words, 5 of them)
+    words of the claim the source never uses: 2017, agent, becom, change, country, electronic, even, float, given, hardware, held, legal, let, liable, no, own, parliament, person, plentiful, power, propos, stand, withdrew
+    > "The European Commission has formally withdrawn two legislative proposals related to judicial cooperation in civil matters, namely the Proposal for a Regulation on the law applicable to the third-party effects of assignments of claims, as well as the Proposal for a Directive on adapting non-contractual civil liability rules to artificial intelligence (AI Liability Directive)." [bm25 5.2]
+    > "European Commission Withdraws Proposals on Assignments of Claims and AI Liability" [bm25 4.8]
+  sources.md:50: reference entry, no claim to match
+
+URL https://www.legislature.ohio.gov/legislation/136/hb469  FLAGGED
+  script.md:189: What would change that: agents given legal standing of their own, or power and hardware becoming plentiful. The European Parliament floated electronic persons in 2017; in 2025 the EU withdrew even its
+  sources.md:50: - S70: European Parliament; EAPIL, "European Parliament resolution on civil law rules on robotics; EAPIL on the withdrawn AI Liability Directive", https://www.europarl.europa.eu/doceo/document/TA-8-20
+  ! NOT CHECKED: URL: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)>
+
+URL https://www.fool.com/earnings/call-transcripts/2026/08/12/hubspot-hubs-q2-2026-earnings-call-transcript/  FLAGGED
+  title:   "HubSpot (HUBS) Q2 2026 Earnings Call Transcript | The Motley FoolArrow upArrow upArrow upArrow upArrow upArrow upArrow upArrow upArrow upArrow upArrow downArrow up"
+  page:    live
+  text:    html, 517 sentences
+  script.md:197, claim {argued: definition}: "Here is what it rests on. Net revenue retention asks: of what last year's customers paid you, how much do they pay now, upgrades and cancellations included?"
+    match: weak (best of those shown has 18% of the claim's words, 5 of them)
+    words of the claim the source never uses: cancellation, pay, upgrad
+    > "If you think about the net revenue retention in the quarter, I think it's helpful to think about the components of net revenue retention, and it starts as it always does with the customer dollar retention." [bm25 14.2]
+    > "For the full year of 2026, we expect net revenue retention to be roughly flat year-over-year." [bm25 13.3]
+  script.md:203, claim {measured: HubSpot, 2026 calls}: "A larger company shows the same pressure more slowly. HubSpot's net revenue retention was a hundred and three percent at the start of 2026, and a hundred and one in its latest quarter."
+    match: weak (best of those shown has 27% of the claim's words, 5 of them)
+    words of the claim the source never uses: 101, 103
+    > "If you think about the net revenue retention in the quarter, I think it's helpful to think about the components of net revenue retention, and it starts as it always does with the customer dollar retention." [bm25 15.7]
+    > "Net Revenue Retention -- 102%, a 1 percentage point decrease reflecting budget optimization and downgrade pressure among existing customers." [bm25 12.9]
+  script.md:205, claim {reported: HubSpot, Q3 2026 call}: "Over a hundred means existing customers still pay a little more than a year ago. Its gross retention held steady in the high eighties: customers are leaving no faster than before; they are buying less that is new."
+    match: none (best of those shown has 11% of the claim's words, 2 of them)
+    words of the claim the source never uses: eighty, gross, held, leav, pay
+    > "We're doing more with less and getting faster as we go, and it is showing up in the numbers." [bm25 12.8]
+    > "And specifically to unpack those, customers want proof of value before they buy." [bm25 9.7]
+  sources.md:40, claim: "- S60: HubSpot (transcripts on fool.com and earningswhispers.com; filing on SEC EDGAR), "HubSpot earnings calls, Q1 to Q3 2026, with the 10-Q definition of net revenue retention","
+    match: weak (best of those shown has 25% of the claim's words, 6 of them)
+    words of the claim the source never uses: definit, earningswhisper, edgar, fil, s60
+    > "HubSpot (HUBS) Q3 2026 Earnings Call Transcript" [bm25 26.5]
+    > "Coherus Oncology (CHRS) Q3 2026 Earnings Call Transcript" [bm25 22.4]
+  ! NO MATCH: no sentence of the source matches the claim at script.md:205
+  ! QUOTE: not in the source's text: "HubSpot earnings calls, Q1 to Q3 2026, with the 10-Q definition of net revenue retention"
+
+URL https://www.earningswhispers.com/transcript/HUBS/Q32026  FLAGGED
+  title:   "Earnings Whispers | HubSpot, Inc. (HUBS) Q3 2026 Earnings Call Transcript"
+  page:    live
+  text:    html, 514 sentences
+  script.md:197, claim {argued: definition}: "Here is what it rests on. Net revenue retention asks: of what last year's customers paid you, how much do they pay now, upgrades and cancellations included?"
+    match: weak (best of those shown has 30% of the claim's words, 6 of them)
+    words of the claim the source never uses: cancellation, pay
+    > "We now expect full-year 2026 net revenue retention to be down about two points year-over-year." [bm25 14.3]
+    > "So with net revenue retention at 101% and it was flagged that it was under a little bit of pressure from budget optimizations, how much of that NRR pressure reflects fewer upgrades versus customer churn are trends meaningfully different between smaller and larger customers or vertical to vertical?" [bm25 11.9]
+  script.md:203, claim {measured: HubSpot, 2026 calls}: "A larger company shows the same pressure more slowly. HubSpot's net revenue retention was a hundred and three percent at the start of 2026, and a hundred and one in its latest quarter."
+    match: weak (best of those shown has 41% of the claim's words, 7 of them)
+    words of the claim the source never uses: 103, latest, slow
+    > "Net revenue retention was 101% down about one point quarter over quarter, driven by a step up in budget sensitivity, which was also more pronounced down market." [bm25 16.0]
+    > "So with net revenue retention at 101% and it was flagged that it was under a little bit of pressure from budget optimizations, how much of that NRR pressure reflects fewer upgrades versus customer churn are trends meaningfully different between smaller and larger customers or vertical to vertical?" [bm25 15.6]
+  script.md:205, claim {reported: HubSpot, Q3 2026 call}: "Over a hundred means existing customers still pay a little more than a year ago. Its gross retention held steady in the high eighties: customers are leaving no faster than before; they are buying less that is new."
+    match: weak (best of those shown has 11% of the claim's words, 4 of them)
+    words of the claim the source never uses: 100, eighty, held, leav, pay, steady
+    > "They want proof before they buy." [bm25 10.5]
+    > "And we will use the results to validate customer adoption, credit usage, retention, and the impact on new ARR before we finalize the timing of the broader rollout." [bm25 10.3]
+  sources.md:40, claim: "- S60: HubSpot (transcripts on fool.com and earningswhispers.com; filing on SEC EDGAR), "HubSpot earnings calls, Q1 to Q3 2026, with the 10-Q definition of net revenue retention","
+    match: weak (best of those shown has 17% of the claim's words, 4 of them)
+    words of the claim the source never uses: 10, definit, earningswhisper, edgar, fil, fool, q1, s60, sec
+    > "Q3 F2026 Earnings Call Transcript" [bm25 21.9]
+    > "At this time, I would like to welcome you to HubSpot's third quarter 2026 earnings call." [bm25 14.6]
+  ! QUOTE: not in the source's text: "HubSpot earnings calls, Q1 to Q3 2026, with the 10-Q definition of net revenue retention"
+
+URL https://www.sec.gov/Archives/edgar/data/0001404655/000119312526447363/hubs-20260930.htm  FLAGGED
+  title:   "10-Q"
+  page:    live, moved to https://www.sec.gov/Archives/edgar/data/1404655/000119312526447363/hubs-20260930.htm
+  text:    html, 1509 sentences
+  script.md:197, claim {argued: definition}: "Here is what it rests on. Net revenue retention asks: of what last year's customers paid you, how much do they pay now, upgrades and cancellations included?"
+    match: weak (best of those shown has 14% of the claim's words, 4 of them)
+    words of the claim the source never uses: ask, cancellation, here, last, rest
+    > "A definition of each of the key terms used to calculate Net Revenue Retention is included below." [bm25 16.6]
+    > "Net Revenue Retention is a measure of the percentage of recurring revenue retained from Customers over a given period of time." [bm25 15.5]
+  script.md:203, claim {measured: HubSpot, 2026 calls}: "A larger company shows the same pressure more slowly. HubSpot's net revenue retention was a hundred and three percent at the start of 2026, and a hundred and one in its latest quarter."
+    match: none (best of those shown has 14% of the claim's words, 3 of them)
+    words of the claim the source never uses: 103, latest
+    > "Our Net Revenue Retention for a given period is calculated by first dividing Retained Subscription Revenue by Retention Base Revenue in the given period, calculating the weighted average of these rates using the Retention Base Revenue for the period, and then annualizing the resulting rates." [bm25 14.2]
+    > "A definition of each of the key terms used to calculate Net Revenue Retention is included below." [bm25 13.9]
+  script.md:205, claim {reported: HubSpot, Q3 2026 call}: "Over a hundred means existing customers still pay a little more than a year ago. Its gross retention held steady in the high eighties: customers are leaving no faster than before; they are buying less that is new."
+    match: weak (best of those shown has 13% of the claim's words, 4 of them)
+    words of the claim the source never uses: ago, eighty, leav, steady
+    > "In a few cases, these vendors may also be able to offer a customer platform at little or no additional cost by bundling it with their existing suite of applications." [bm25 16.2]
+    > "Our customers have no obligation to renew their subscriptions for our platform after the expiration of their subscription periods, substantially all of which are one year or less." [bm25 14.9]
+  sources.md:40, claim: "- S60: HubSpot (transcripts on fool.com and earningswhispers.com; filing on SEC EDGAR), "HubSpot earnings calls, Q1 to Q3 2026, with the 10-Q definition of net revenue retention","
+    match: weak (best of those shown has 16% of the claim's words, 4 of them)
+    words of the claim the source never uses: earningswhisper, edgar, fool, q1, q3, s60, transcript
+    > "A definition of each of the key terms used to calculate Net Revenue Retention is included below." [bm25 22.4]
+    > "Our website is located at http://www.hubspot.com, and our investor relations website is located at https://www.hubspot.com/investor-relations." [bm25 16.2]
+  ! NO MATCH: no sentence of the source matches the claim at script.md:203
+  ! QUOTE: not in the source's text: "HubSpot earnings calls, Q1 to Q3 2026, with the 10-Q definition of net revenue retention"
+
+URL https://www.growthunhinged.com/p/the-ai-churn-wave  FLAGGED
+  title:   "The AI churn wave?caret-rightbeehiiv"
+  page:    live
+  text:    html, 107 sentences
+  script.md:199, claim {measured: ChartMogul data, via Growth Unhinged}: "Across ChartMogul's data for 2025, the median for business software was eighty-two percent."
+    match: weak (best of those shown has 37% of the claim's words, 3 of them)
+    > "The median NRR was 82%." [bm25 12.6]
+    > "I mapped out the 3,500 software companies in the dataset across two dimensions: net revenue retention (NRR) from September 2025 and year-on-year revenue growth." [bm25 7.8]
+  script.md:201, claim {measured: ChartMogul data, via Growth Unhinged}: "For AI-native apps it was forty-eight: about half the money from last year's customers, gone in a year."
+    match: none (best of those shown has 12% of the claim's words, 2 of them)
+    words of the claim the source never uses: gone, half, last, money
+    > "Durability is an existential question for AI apps." [bm25 6.2]
+    > "A data-driven investigation into retention for AI apps" [bm25 5.8]
+  sources.md:16: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:201
+
+URL https://www.sec.gov/Archives/edgar/data/0001404655/000119312526447249/hubs-ex99_1.htm  FLAGGED
+  title:   "EX-99.1"
+  page:    live, moved to https://www.sec.gov/Archives/edgar/data/1404655/000119312526447249/hubs-ex99_1.htm
+  text:    html, 176 sentences
+  script.md:207, claim {reported: HubSpot filings and guidance}: "Growth is slowing with it: twenty-one percent at the end of 2024, seventeen now, and the company expects twelve next quarter."
+    match: none (best of those shown has 17% of the claim's words, 3 of them)
+    words of the claim the source never uses: 2024, growth, next, now, slow
+    > "Non-GAAP operating income is expected to be in the range of $772.0 million to $773.0 million, representing a 21% operating income margin." [bm25 8.6]
+    > "Total revenue is expected to be in the range of $945.0 million to $947.0 million, up 12% year over year on an as-reported basis and in constant currency." [bm25 7.9]
+  sources.md:15: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:207
+
+URL https://www.growthunhinged.com/p/2025-state-of-b2b-monetization  ok
+  title:   "The state of B2B monetization in 2025caret-rightbeehiiv"
+  page:    live
+  text:    html, 149 sentences
+  script.md:209, claim {reported: Growth Unhinged survey}: "Pricing is moving too. In a survey of software firms, pure per-seat pricing fell in one year from twenty-one to fifteen percent of them; hybrid pricing, a subscription plus usage, rose from twenty-seven to forty-one."
+    match: weak (best of those shown has 16% of the claim's words, 5 of them)
+    words of the claim the source never uses: fell, firm, mov, pure, rose
+    > "Hybrid pricing is up from 27% to 41%." [bm25 17.4]
+    > "Seat-based pricing is down from 21% to 15%." [bm25 16.5]
+  sources.md:17: reference entry, no claim to match
+
+URL https://cloudedjudgement.substack.com/p/clouded-judgement-92526-own-the-interaction  ok
+  title:   "Clouded Judgement 9.25.26 - Own the Interaction Layer"
+  page:    live
+  text:    html, 120 sentences
+  script.md:215, claim {argued: Jamin Ball, Sep 2026}: "One analyst argues that whoever owns the place where people act takes the profit, and everyone else becomes middleware."
+    match: weak (best of those shown has 31% of the claim's words, 6 of them)
+    words of the claim the source never uses: act, analyst, argu, becom, else, everyone, people
+    > "The other point of the post is that whoever owns the interaction layer (ie the place where the end user takes actions) ends up capturing most of the profits." [bm25 14.8]
+    > "It shows the number of months it takes for a SaaS business to pay back its fully burdened CAC on a gross profit basis." [bm25 5.5]
+  sources.md:18: reference entry, no claim to match
+
+URL https://247wallst.com/investing/2026/09/23/travel-booking-stocks-tumble-as-muse-threatens-to-bypass-them-expedia-falls-7-airbnb-drops-6-booking-holdings-sinks-5/  ok
+  title:   "Travel Booking Stocks Tumble as Muse Threatens to Bypass Them: Expedia Falls 7%, Airbnb Drops 6%, Booking Holdings Sinks 5% - 24/7 Wall St."
+  page:    live
+  text:    html, 78 sentences
+  script.md:217, claim {reported: 24/7 Wall St., Sep 2026}: "When Meta's booking agent was announced, travel stocks fell, and one trading desk named businesses built on customer passivity as exposed."
+    match: weak (best of those shown has 40% of the claim's words, 6 of them)
+    words of the claim the source never uses: announc
+    > "Goldman Sachs warned in a trading desk note that industries built on recurring bills, add-on charges and customer passivity face significant disruption from agents of this kind." [bm25 15.7]
+    > "Online travel booking stocks are selling off in Wednesday morning trading as the market reprices the aggregator model against Muse, the personal artificial intelligence (AI) agent from Meta Platforms (NASDAQ:META | META Price Prediction)." [bm25 8.9]
+  sources.md:20: reference entry, no claim to match
+
+URL https://ashugarg.substack.com/p/ais-trillion-dollar-opportunity-context  ok
+  title:   "AI’s trillion-dollar opportunity: Context graphs"
+  page:    live
+  text:    html, 152 sentences
+  script.md:223, claim {argued: Foundation Capital}: "Become the record of the customer's decisions: who approved what, under which rule, and why. Foundation Capital, a venture firm, argues it could become a new system of record."
+    match: weak (best of those shown has 20% of the claim's words, 4 of them)
+    words of the claim the source never uses: firm, rule, venture
+    > "At Foundation Capital, we agree." [bm25 12.3]
+    > "The pitch: data platforms replace systems of record and become the foundation for AI agents." [bm25 10.1]
+  sources.md:19: reference entry, no claim to match
+
+URL https://cloudedjudgement.substack.com/p/clouded-judgement-101626-the-diffusion  FLAGGED
+  title:   "Clouded Judgement 10.16.26 - The Diffusion Gap"
+  page:    live
+  text:    html, 100 sentences
+  script.md:233, claim {measured: Clouded Judgement, Oct 2026}: "Investors have already repriced software. The median public cloud company trades at about four and a half times next year's revenue."
+    match: weak (best of those shown has 19% of the claim's words, 4 of them)
+    words of the claim the source never uses: already, half, investor, repric, tim
+    > "Every week I’ll provide updates on the latest trends in cloud software companies." [bm25 9.5]
+    > "Most public companies don’t report net new ARR, so I’m taking an implied ARR metric (quarterly subscription revenue x 4)." [bm25 9.5]
+  script.md:235, claim {measured: Clouded Judgement, Oct 2026}: "Those growing faster than twenty-two percent get nearly nineteen times. Those under fifteen, under four."
+    match: none (best of those shown has 22% of the claim's words, 3 of them)
+    words of the claim the source never uses: 19, faster, near, tim
+    > "In the buckets below I consider high growth >22% projected NTM growth, mid growth 15%-22% and low growth <15%." [bm25 11.2]
+    > "Median R&D % Revenue: 22%" [bm25 7.9]
+  sources.md:14: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:235
+
+URL https://www.canadianlawyermag.com/news/international/anthropic-legal-tool-jolts-share-price-of-global-legal-data-leaders/393665  ok
+  title:   "Anthropic legal tool jolts share price of global legal data leaders | Canadian Lawyer"
+  page:    live
+  text:    html, 26 sentences
+  script.md:237, claim {reported: Canadian Lawyer, 3 Feb 2026}: "When a legal plug-in for an AI assistant came out, Thomson Reuters shares fell by double digits: fourteen percent, by one report."
+    match: weak (best of those shown has 21% of the claim's words, 4 of them)
+    words of the claim the source never uses: 1, came, digit, double, out, plug, report
+    > "Shares in Pearson fell about 4 percent, Relx dropped 14 percent, Sage 5.5 percent, Wolters Kluwer 10.5 percent, and London Stock Exchange Group 8.5 percent." [bm25 9.8]
+    > "In US trading, Thomson Reuters’ shares were down more than 11 percent, with similar declines for Wolters Kluwer, Relx and Pearson." [bm25 8.0]
+  sources.md:24: reference entry, no claim to match
+
+URL https://www.morningstar.com/news/dow-jones/202602037872/thomson-reuters-shares-slide-after-anthropic-unveils-ai-tool-targeting-legal-workflow-business  ok
+  page:    refused a plain fetch (HTTP 403); read in the web toolkit's browser
+  text:    page, 40 sentences
+  script.md:237, claim {reported: Canadian Lawyer, 3 Feb 2026}: "When a legal plug-in for an AI assistant came out, Thomson Reuters shares fell by double digits: fourteen percent, by one report."
+    match: weak (best of those shown has 21% of the claim's words, 5 of them)
+    words of the claim the source never uses: 14, assistant, came, digit, double, out, plug, report
+    > "Legal Professionals is one of Thomson Reuters' "Big 3" business segments." [bm25 11.2]
+    > "Shares of Thomson Reuters fell sharply Tuesday after artificial intelligence company Anthropic revealed a new legal automation tool that threatens to encroach on the company's core contract-review and workflow-software business." [bm25 9.2]
+  sources.md:24: reference entry, no claim to match
+
+URL https://www.sec.gov/Archives/edgar/data/0001373715/000137371526000092/erq3fy26.htm  FLAGGED
+  title:   "Document"
+  page:    live, moved to https://www.sec.gov/Archives/edgar/data/1373715/000137371526000092/erq3fy26.htm
+  text:    html, 231 sentences
+  script.md:241, claim {measured: company results, Q3 2026}: "Yet software revenue has not stopped: in their latest quarters, ServiceNow's subscriptions grew twenty-one percent and Atlassian's revenue twenty-four."
+    match: none (best of those shown has 15% of the claim's words, 3 of them)
+    words of the claim the source never uses: 24, atlassian, grew, latest, stop, subscription, yet
+    > "As of September 30, 2026, current remaining performance obligations (“cRPO”), contract revenue that will be recognized as revenue in the next 12 months, was $13.65 billion, representing 20.5% year-over-year growth and 21% in constant currenc" [bm25 8.5]
+    > "ServiceNow Reports Third Quarter 2026 Financial Results" [bm25 6.2]
+  sources.md:41: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:241
+  ! TITLE: text has "ServiceNow Q3 2026 8-K; Atlassian Q1 FY27 results"; the page does not carry it
+
+URL https://newshub.medianet.com.au/2026/11/atlassian-announces-first-quarter-fiscal-year-2027-results/180552/  FLAGGED
+  title:   "Atlassian Announces First Quarter Fiscal Year 2027 Results – News Hub"
+  page:    live
+  text:    html, 203 sentences
+  script.md:241, claim {measured: company results, Q3 2026}: "Yet software revenue has not stopped: in their latest quarters, ServiceNow's subscriptions grew twenty-one percent and Atlassian's revenue twenty-four."
+    match: weak (best of those shown has 20% of the claim's words, 4 of them)
+    words of the claim the source never uses: 21, servicenow, stop, yet
+    > "Revenue: Total revenue was $1,772 million for the first quarter of fiscal year 2027, up 24% from $1,433 million for the first quarter of fiscal year 2026." [bm25 10.7]
+    > "Revenue of $1,772 million, up 24% year-over-year" [bm25 10.1]
+  sources.md:41: reference entry, no claim to match
+  ! TITLE: text has "ServiceNow Q3 2026 8-K; Atlassian Q1 FY27 results"; the page does not carry it
+
+URL https://www.pjm.com/-/media/DotCom/about-pjm/newsroom/2026-releases/20260714-pjm-capacity-auction-procures-138318-mw-of-generation-resources.pdf  FLAGGED
+  page:    live
+  text:    pdf, 51 sentences
+  script.md:249, claim {measured: PJM auction, Jul 2026}: "Physical power does look different. In PJM, capacity has cleared at its price cap three years running."
+    match: weak (best of those shown has 18% of the claim's words, 4 of them)
+    words of the claim the source never uses: different, look, physical, run
+    > "Capacity Price Comes in at the Cap of $325, Down 2.5% In coordination with the governors of all 13 PJM states and the Federal Energy Regulatory Commission, PJM established a price cap and floor, or collar, for four capacity auctions to protect both consumers and investors from market volatility." [bm25 7.1]
+    > "The next Base Residual Auction, which is for the 2029/2030 Delivery Year, is scheduled for December as PJM works toward returning to its three-year-forward planning cycle." [bm25 6.3]
+  script.md:251, claim {measured: PJM auction, Jul 2026}: "The last auction came up six thousand eight hundred megawatts short of what reliability needs."
+    match: none (best of those shown has 29% of the claim's words, 3 of them)
+    words of the claim the source never uses: 6800, megawat
+    > "Creating a FERC-approved, temporary Expedited Interconnection Track for up to 10 state-sponsored, shovel ready, high-capacity generation projects that could come online quickly to address short-and longterm supply needs" [bm25 6.6]
+    > "Resource Level Short of Standard The capacity of the resources procured in the auction, plus FRR resources, is short of PJM’s reliability requirement by 6,831 MW, meaning that the committed supply is less than what would be required to meet the one-event-in-10year reliability standard." [bm25 5.7]
+  sources.md:21: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:251
+
+URL https://emp.lbl.gov/news/backlog-power-plants-seeking-transmission-grid-connection-eased-somewhat-2025-amidst  FLAGGED
+  page:    refused a plain fetch (HTTP 403); read in the web toolkit's browser
+  text:    page, 48 sentences
+  script.md:253, claim {measured: Berkeley Lab, Queued Up 2026}: "A power plant that came online in 2025 had typically waited more than five years from asking to connect to running, in the regions with data."
+    match: weak (best of those shown has 25% of the claim's words, 5 of them)
+    words of the claim the source never uses: ask, came, run, typical, wait
+    > "Additionally, interconnection process timelines remain high: the median duration from submitting a request to signing an IA was well over 3 years in 2025, while the timeline to reach commercial operations exceeds 5 years (for the subset of regions with available data) (Figure 4B)." [bm25 9.4]
+    > "A new slide deck, data file, and interactive visualization from Lawrence Berkeley National Laboratory (in partnership with Interconnection.fyi ) synthesizes data from transmission interconnection queues throughout the U.S. to illustrate trends in proposed power plants across time, technologies, and regions." [bm25 7.4]
+  sources.md:22, claim: "- S37: Lawrence Berkeley National Laboratory, "Backlog of power plants seeking transmission grid connection eased somewhat in 2025 ("Queued Up", 2026 edition)","
+    match: strong (best of those shown has 62% of the claim's words, 13 of them)
+    words of the claim the source never uses: s37
+    > "Berkeley Lab Energy Technologies Area Energy Analysis Division Backlog of power plants seeking transmission grid connection eased somewhat in 2025 amidst high withdrawals July 1, 2026 Annual Berkeley Lab data visualization slide deck illustrates over 2,000 gigawatts of generation and storage capacity active in U.S. interconnection queues" [bm25 20.3]
+    > "©2026 Energy Technologies Area, Berkeley Lab OUR ORGANIZATION Lawrence Berkeley National Laboratory Energy Technologies Area Energy Analysis Division Lawrence Berkeley National Laboratory twitter instagram LinkedIn facebook youtube DOE logo UC logo A U.S." [bm25 13.9]
+  ! QUOTE: not in the source's text: ", 2026 edition)"
+
+URL https://www.woodmac.com/news/opinion/mind-the-gap-tackling-supply-chain-challenges-in-the-electric-td-sector/  ok
+  title:   "Mind the gap: tackling supply-chain challenges in the electric T&D sector | Wood MackenzieSearchLinkedInLinkedInBlueskyXEmailCloseCloseCloseShareEmailBlueskyXLinkedInLinkedInPrint"
+  page:    live
+  text:    html, 105 sentences
+  script.md:255, claim {measured: Wood Mackenzie, Q2 2025}: "In 2025, power transformers took an average of a hundred and twenty-eight weeks to deliver."
+    match: weak (best of those shown has 56% of the claim's words, 5 of them)
+    > "Power transformer lead times also eased in Q2, falling by 10 weeks to an average of 128 weeks, while switchgear edged down to an average of 44 weeks." [bm25 15.2]
+    > "This has added to the demand for power transformers, distribution transformers, switchgear and breakers, and wire." [bm25 5.1]
+  sources.md:26: reference entry, no claim to match
+
+URL https://resources.energybin.com/solar-resources/h1-2026-pv-module-price-index-secondary-solar-market  FLAGGED
+  title:   "H1 2026 PV Module Price Index - Secondary Solar Market"
+  page:    live
+  text:    html, 68 sentences
+  script.md:257, claim {measured: EnergyBin, H1 2026}: "But the panels are not the scarce part. Used solar modules sell for about ten cents a watt."
+    match: none (best of those shown has 25% of the claim's words, 3 of them)
+    words of the claim the source never uses: cent, panel, scarce, sell
+    > "For example, in the United States, researchers reported that since signed into law, the One Big Beautiful Bill Act has cost the country about 10 gigawatts of lost solar capacity and 9 gigawatts of energy storage." [bm25 6.4]
+    > "For example, in May, First Solar 455-watt modules that had been in operation for just seven months last year were reselling at $0.10-watt." [bm25 5.3]
+  sources.md:23: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:257
+
+URL https://decrypt.co/380741/gta-v-iphone-free-photoshop-ai-tool-rea-upending-software  ok
+  title:   "From GTA V on iPhone to Free Photoshop: This AI Tool Is Upending Software - Decrypt"
+  page:    live
+  text:    html, 54 sentences
+  script.md:275, claim {reported: Decrypt, Oct 2026}: "He also caught me counting GitHub stars as use. Stars are attention. So I dropped a tool with a hundred thousand of them, and kept only rebuilds that people used, paid for, or that an incumbent had to answer."
+    match: weak (best of those shown has 17% of the claim's words, 4 of them)
+    words of the claim the source never uses: attent, caught, count, incumbent, kept
+    > "REA, an open-source toolkit that connects AI coding agents to reverse-engineering tools like Ghidra, went from under 10,000 GitHub stars on October 6 to more than 100,000 by October 12." [bm25 7.8]
+    > "A free tool that lets AI agents pull apart almost any piece of software has become the hottest project on GitHub, jumping from fewer than 10,000 stars on October 6 to more than 100,000 by Monday." [bm25 7.6]
+  sources.md:9: reference entry, no claim to match
+
+URL https://github.com/morluto/rea  FLAGGED
+  title:   "GitHub - morluto/rea: Reverse engineer anything with agents, from app behavior down to native binaries. · GitHub"
+  page:    live
+  text:    html, 250 sentences
+  script.md:275, claim {reported: Decrypt, Oct 2026}: "He also caught me counting GitHub stars as use. Stars are attention. So I dropped a tool with a hundred thousand of them, and kept only rebuilds that people used, paid for, or that an incumbent had to answer."
+    match: none (best of those shown has 10% of the claim's words, 2 of them)
+    words of the claim the source never uses: 100000, answer, attent, caught, count, drop, he, incumbent, kept, paid, people, rebuild
+    > "🎉 400,000 GitHub stars — thank you!" [bm25 11.9]
+    > "Check which operations work and tell me how to run it." [bm25 5.2]
+  sources.md:9: reference entry, no claim to match
+  ! NO MATCH: no sentence of the source matches the claim at script.md:275
+
+URL https://en.wikipedia.org/wiki/Jevons_paradox  ok
+  title:   "Jevons paradox - Wikipedia"
+  page:    live
+  text:    html, 185 sentences
+  sources.md:46: reference entry, no claim to match
+
+44 of 70 flagged

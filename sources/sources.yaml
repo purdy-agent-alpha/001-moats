@@ -1,0 +1,966 @@
+# Public source list. accessed: the date the source was read (YYYY-MM-DD). A source given up keeps its entry with `dropped`.
+# `read` says how much was read: read, abstract, search summary or snippet. Entries S71 and up were read during the research but
+# are not cited in the video.
+- "id": "S2"
+  "title": "AI software economics: why traditional SaaS moats are dead"
+  "publisher": "Ability.ai"
+  "url": "https://www.ability.ai/blog/ai-software-economics-moats"
+  "accessed": 2026-10-19
+  "kind": "blog"
+  "read": "search summary"
+  "note": "The page itself was not opened; the search summary gives the three classic moats and seat pricing. Accessed date\
+    \ is the first day of the range 2026-10-19 to 2026-10-22 in which this source was retrieved; the exact day is not recorded."
+- "id": "S3"
+  "title": "When Code Gets Cheap, Scarcity Moves"
+  "author": "Andrew Stroup"
+  "publisher": "stroupaloop.com"
+  "published": "12 Apr 2026"
+  "url": "https://stroupaloop.com/blog/2026/04/12/when-code-gets-cheap-scarcity-moves/"
+  "accessed": 2026-10-19
+  "kind": "blog"
+  "read": "read"
+  "note": "Opened and read. Accessed date is the first day of the range 2026-10-19 to 2026-10-22 in which this source was\
+    \ retrieved; the exact day is not recorded."
+- "id": "S4"
+  "title": "The Software Industry's Great Reset and the New Moat That Matters"
+  "author": "Scott Voss"
+  "publisher": "HarbourVest"
+  "published": "9 Feb 2026"
+  "url": "https://www.harbourvest.com/insights-news/insights/software-industry-great-reset-the-new-moat-that-matters/"
+  "accessed": 2026-10-19
+  "kind": "company statement"
+  "read": "read"
+  "note": "Opened and read; an investment firm's view. Accessed date is the first day of the range 2026-10-19 to 2026-10-22\
+    \ in which this source was retrieved; the exact day is not recorded."
+- "id": "S6"
+  "title": "Attack of the clones"
+  "author": "Martin Alderson"
+  "publisher": "martinalderson.com"
+  "published": "Feb 2026 (13 Feb 2026 per the post)"
+  "url": "https://martinalderson.com/posts/attack-of-the-clones/"
+  "accessed": 2026-10-19
+  "kind": "blog"
+  "read": "read"
+  "note": "Opened and read. The post reports cloning most of Linear's core functionality in 20 prompts; this is the author's\
+    \ own claim. Accessed date is the first day of the range 2026-10-19 to 2026-10-22 in which this source was retrieved;\
+    \ the exact day is not recorded."
+- "id": "S10"
+  "title": "The Network Effects Manual"
+  "publisher": "NFX"
+  "url": "https://www.nfx.com/post/network-effects-manual"
+  "also":
+  - "https://en.wikipedia.org/wiki/Network_effect"
+  "accessed": 2026-10-19
+  "kind": "blog"
+  "read": "read"
+  "note": "Opened and read. Network effects \"occur when a company's product or service becomes more valuable as usage increases.\"\
+    \ The manual is revised over time; the version read was dated June 2021 by the page. Accessed date is the first day of\
+    \ the range 2026-10-19 to 2026-10-22 in which this source was retrieved; the exact day is not recorded. The Wikipedia\
+    \ article on network effects was also opened (read 2026-11-08) for the definition of direct network effects."
+- "id": "S11"
+  "title": "The Empty Promise of Data Moats"
+  "author": "Martin Casado and Peter Lauten"
+  "publisher": "a16z"
+  "published": "9 May 2019"
+  "url": "https://a16z.com/the-empty-promise-of-data-moats/"
+  "accessed": 2026-10-19
+  "kind": "blog"
+  "read": "read"
+  "note": "Opened and read; a venture firm's essay. Accessed date is the first day of the range 2026-10-19 to 2026-10-22 in\
+    \ which this source was retrieved; the exact day is not recorded."
+- "id": "S12"
+  "title": "Decrypt on REA (reverse-engineering AI tool)"
+  "publisher": "Decrypt"
+  "published": "12 Oct 2026"
+  "url": "https://decrypt.co/380741/gta-v-iphone-free-photoshop-ai-tool-rea-upending-software"
+  "also":
+  - "https://github.com/morluto/rea"
+  "accessed": 2026-10-19
+  "kind": "press"
+  "read": "read"
+  "note": "Opened and read. Reported by the press, not measured. The tool's repository is listed as a further link; its GitHub\
+    \ stars were counted as attention, not use. Accessed date is the first day of the range 2026-10-19 to 2026-10-22 in which\
+    \ this source was retrieved; the exact day is not recorded."
+- "id": "S14"
+  "title": "Has the cost of building software just dropped 90%?"
+  "author": "Martin Alderson"
+  "publisher": "martinalderson.com"
+  "published": "8 Dec 2025"
+  "url": "https://martinalderson.com/posts/has-the-cost-of-software-just-dropped-90-percent/"
+  "accessed": 2026-11-09
+  "kind": "blog"
+  "read": "read"
+  "note": "The author's own post, opened 2026-11-09; an earlier version of the research cited a repost on another site instead."
+- "id": "S15"
+  "title": "Software Developers Will Never Die"
+  "author": "Francois Zaninotto"
+  "publisher": "Marmelab"
+  "published": "20 Mar 2026"
+  "url": "https://marmelab.com/blog/2026/03/20/software-will-never-die.html"
+  "accessed": 2026-10-19
+  "kind": "blog"
+  "read": "read"
+  "note": "Opened and read. Accessed date is the first day of the range 2026-10-19 to 2026-10-22 in which this source was\
+    \ retrieved; the exact day is not recorded."
+- "id": "S23"
+  "title": "Rebuild Dossier: Mechanically-Enforced Specs for Agentic App Rebuilds, and What Model-Tier Failures Reveal"
+  "author": "Parker Fawcett"
+  "publisher": "arXiv"
+  "published": "Sept 2026"
+  "url": "https://arxiv.org/pdf/2608.23616"
+  "accessed": 2026-10-19
+  "kind": "preprint"
+  "read": "abstract"
+  "note": "Abstract-level reading only (arXiv 2608.23616). Accessed date is the first day of the range 2026-10-19 to 2026-10-22\
+    \ in which this source was retrieved; the exact day is not recorded."
+- "id": "S24"
+  "title": "LLM inference prices have fallen rapidly but unequally across tasks"
+  "publisher": "Epoch AI"
+  "published": "Mar 2025"
+  "url": "https://epoch.ai/data-insights/llm-inference-price-trends"
+  "accessed": 2026-10-19
+  "kind": "dataset"
+  "read": "read"
+  "note": "Measured by the publisher; read. Accessed date is the first day of the range 2026-10-19 to 2026-10-22 in which\
+    \ this source was retrieved; the exact day is not recorded."
+- "id": "S27"
+  "title": "Clouded Judgement 10/16/26: the diffusion"
+  "author": "Jamin Ball"
+  "publisher": "Clouded Judgement"
+  "published": "16 Oct 2026"
+  "url": "https://cloudedjudgement.substack.com/p/clouded-judgement-101626-the-diffusion"
+  "accessed": 2026-10-19
+  "kind": "newsletter"
+  "read": "read"
+  "note": "Cited for software market multiples. Accessed date is the first day of the range 2026-10-19 to 2026-10-22 in which\
+    \ this source was retrieved; the exact day is not recorded."
+- "id": "S29"
+  "title": "HubSpot Q3 2026 results release (exhibit 99.1)"
+  "publisher": "HubSpot, via SEC EDGAR"
+  "published": "4 Nov 2026"
+  "url": "https://www.sec.gov/Archives/edgar/data/0001404655/000119312526447249/hubs-ex99_1.htm"
+  "accessed": 2026-11-08
+  "kind": "filing"
+  "read": "read"
+  "note": "Revenue up 17%, as reported and in constant currency; Q4 guided \"up 12%\". The Q4 2024 figure of 21% as reported\
+    \ comes from the call transcript of 12 Feb 2025. Accessed date is an estimate (the notes give 2026-11-08 for the HubSpot\
+    \ readings)."
+- "id": "S31"
+  "title": "The AI churn wave"
+  "publisher": "Growth Unhinged"
+  "published": "Dec 2025"
+  "url": "https://www.growthunhinged.com/p/the-ai-churn-wave"
+  "accessed": 2026-10-19
+  "kind": "newsletter"
+  "read": "read"
+  "note": "Measured, with ChartMogul data; the AI-native set is about 200 companies. Accessed date is the first day of the\
+    \ range 2026-10-19 to 2026-10-22 in which this source was retrieved; the exact day is not recorded."
+- "id": "S32"
+  "title": "2025 State of B2B Monetization"
+  "publisher": "Growth Unhinged"
+  "published": "2025"
+  "url": "https://www.growthunhinged.com/p/2025-state-of-b2b-monetization"
+  "accessed": 2026-10-19
+  "kind": "newsletter"
+  "read": "read"
+  "note": "A survey. Accessed date is the first day of the range 2026-10-19 to 2026-10-22 in which this source was retrieved;\
+    \ the exact day is not recorded."
+- "id": "S33"
+  "title": "Clouded Judgement 9/25/26: Own the interaction"
+  "author": "Jamin Ball"
+  "publisher": "Clouded Judgement"
+  "published": "25 Sep 2026"
+  "url": "https://cloudedjudgement.substack.com/p/clouded-judgement-92526-own-the-interaction"
+  "accessed": 2026-10-19
+  "kind": "newsletter"
+  "read": "read"
+  "note": "Argued, not measured. Accessed date is the first day of the range 2026-10-19 to 2026-10-22 in which this source\
+    \ was retrieved; the exact day is not recorded."
+- "id": "S34"
+  "title": "AI's trillion-dollar opportunity: context"
+  "author": "Ashu Garg"
+  "publisher": "Foundation Capital (author's newsletter)"
+  "published": "Dec 2025"
+  "url": "https://ashugarg.substack.com/p/ais-trillion-dollar-opportunity-context"
+  "accessed": 2026-10-19
+  "kind": "newsletter"
+  "read": "read"
+  "note": "Argued, no data; the author is at an investing firm. Accessed date is the first day of the range 2026-10-19 to\
+    \ 2026-10-22 in which this source was retrieved; the exact day is not recorded."
+- "id": "S35"
+  "title": "Travel booking stocks tumble as Muse threatens to bypass them"
+  "publisher": "24/7 Wall St."
+  "published": "23 Sep 2026"
+  "url": "https://247wallst.com/investing/2026/09/23/travel-booking-stocks-tumble-as-muse-threatens-to-bypass-them-expedia-falls-7-airbnb-drops-6-booking-holdings-sinks-5/"
+  "accessed": 2026-10-19
+  "kind": "press"
+  "read": "read"
+  "note": "Share prices are measured; the cause given is argued. Accessed date is the first day of the range 2026-10-19 to\
+    \ 2026-10-22 in which this source was retrieved; the exact day is not recorded."
+- "id": "S36"
+  "title": "PJM capacity auction procures 138,318 MW (2028/29 base residual auction results)"
+  "publisher": "PJM Interconnection"
+  "published": "14 Jul 2026"
+  "url": "https://www.pjm.com/-/media/DotCom/about-pjm/newsroom/2026-releases/20260714-pjm-capacity-auction-procures-138318-mw-of-generation-resources.pdf"
+  "accessed": 2026-10-19
+  "kind": "company statement"
+  "read": "read"
+  "note": "Measured auction results. Accessed date is the first day of the range 2026-10-19 to 2026-10-22 in which this source\
+    \ was retrieved; the exact day is not recorded."
+- "id": "S37"
+  "title": "Backlog of power plants seeking transmission grid connection eased somewhat in 2025 (\"Queued Up\", 2026 edition)"
+  "publisher": "Lawrence Berkeley National Laboratory"
+  "published": "2026"
+  "url": "https://emp.lbl.gov/news/backlog-power-plants-seeking-transmission-grid-connection-eased-somewhat-2025-amidst"
+  "accessed": 2026-11-08
+  "kind": "dataset"
+  "read": "read"
+  "note": "Page text checked 2026-11-08: \"the timeline to reach commercial operations exceeds 5 years (for the subset of\
+    \ regions with available data)\". A 61-month median appears in a figure that was not read, so the script says \"more than\
+    \ five years\"."
+- "id": "S40"
+  "title": "H1 2026 PV module price index (secondary solar market)"
+  "publisher": "EnergyBin"
+  "published": "H1 2026"
+  "url": "https://resources.energybin.com/solar-resources/h1-2026-pv-module-price-index-secondary-solar-market"
+  "accessed": 2026-10-19
+  "kind": "dataset"
+  "read": "read"
+  "note": "Measured by a secondary-market trader's index. Accessed date is the first day of the range 2026-10-19 to 2026-10-22\
+    \ in which this source was retrieved; the exact day is not recorded."
+- "id": "S43"
+  "title": "Anthropic legal tool jolts share price of global legal data leaders"
+  "publisher": "Canadian Lawyer"
+  "published": "3 Feb 2026"
+  "url": "https://www.canadianlawyermag.com/news/international/anthropic-legal-tool-jolts-share-price-of-global-legal-data-leaders/393665"
+  "also":
+  - "https://www.morningstar.com/news/dow-jones/202602037872/thomson-reuters-shares-slide-after-anthropic-unveils-ai-tool-targeting-legal-workflow-business"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "\"Nasdaq-listed Thomson Reuters ... dropped 14.2 percent\"; \"In US trading, Thomson Reuters' shares were down\
+    \ more than 11 percent\"; Relx 14; Wolters Kluwer 10.5; no period given. Figures vary by exchange and hour, so the video\
+    \ says \"double digits\" and gives the one figure read, without a market. Dow Jones via Morningstar the same day reports\
+    \ \"Shares trading in Toronto were down more than 17%\" (11:56 ET); that page is a further link of this entry, not cited\
+    \ on its own. An earlier \"16%\" came from that page before it was read. Accessed date is an estimate (first retrieved\
+    \ in the October range; re-read in November)."
+- "id": "S44"
+  "title": "CEOs all think they have an AI moat. Just ask them"
+  "publisher": "Semafor"
+  "published": "12 Mar 2026"
+  "url": "https://www.semafor.com/article/03/12/2026/ceos-all-think-they-have-an-ai-moat-just-ask-them"
+  "accessed": 2026-10-19
+  "kind": "press"
+  "read": "read"
+  "note": "Cited for AlphaSense's count of claims. Accessed date is the first day of the range 2026-10-19 to 2026-10-22 in\
+    \ which this source was retrieved; the exact day is not recorded."
+- "id": "S46"
+  "title": "Mind the gap: tackling supply-chain challenges in the electric T&D sector"
+  "publisher": "Wood Mackenzie"
+  "published": "15 Oct 2025"
+  "url": "https://www.woodmac.com/news/opinion/mind-the-gap-tackling-supply-chain-challenges-in-the-electric-td-sector/"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "Measured. \"Power transformer lead times also eased in Q2, falling by 10 weeks to an average of 128 weeks\". It\
+    \ replaces an earlier source whose page gives no 128-week figure. Accessed date is an estimate."
+- "id": "S47"
+  "title": "Beeper Mini is back"
+  "publisher": "Beeper"
+  "published": "11 Dec 2023"
+  "url": "https://blog.beeper.com/p/beeper-mini-is-back"
+  "also":
+  - "https://techcrunch.com/2023/12/14/apple-again-targets-imessage-on-android-app-beeper-but-company-claims-it-has-a-fix"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "\"More than 100,000 people\" in the first 48 hours; the company's own count. TechCrunch reports Apple blocked it\
+    \ on 8 Dec, three days after the 5 Dec launch. Reported, not measured."
+- "id": "S48"
+  "title": "Economic moat"
+  "publisher": "Morningstar"
+  "url": "https://www.morningstar.com/investing-definitions/economic-moat"
+  "accessed": 2026-11-08
+  "kind": "encyclopedia"
+  "read": "read"
+  "note": "\"A term coined by Warren Buffett\"; five sources; a wide moat is expected to \"last more than 20 years\"."
+- "id": "S49"
+  "title": "Berkshire Hathaway 2007 shareholder letter"
+  "author": "Warren Buffett"
+  "publisher": "Berkshire Hathaway"
+  "published": "Feb 2008"
+  "url": "https://www.berkshirehathaway.com/letters/2007ltr.pdf"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "\"A truly great business must have an enduring 'moat' that protects excellent returns on invested capital\"; \"\
+    competitors will repeatedly assault any business 'castle'\"; \"A moat that must be continuously rebuilt will eventually\
+    \ be no moat at all\"; moats \"make life difficult for their competitors\". PDF opened and text extracted."
+- "id": "S50"
+  "title": "ARC Prize leaderboard, ARC-AGI-1 semi-private set (score and cost per task)"
+  "publisher": "ARC Prize"
+  "url": "https://arcprize.org/leaderboard"
+  "also":
+  - "https://arcprize.org/blog/oai-o3-pub-breakthrough"
+  "accessed": 2026-11-08
+  "kind": "leaderboard"
+  "read": "read"
+  "note": "Data read from the page's embedded data on 2026-11-08: o3-preview (Low) 75.7% at $200 per task (Dec 2024; ARC's\
+    \ repricing at o3-pro rates, while its December 2024 post said $26 at the time, hence \"at today's prices\"); Gemini 3\
+    \ Pro 75.0% at $0.493 (Nov 2025); GPT-6.1 Sol (High) 98.5% at $0.059 (Sep 2026). Measured by the benchmark's maintainers."
+- "id": "S51"
+  "title": "Tiered Super-Moore's Law"
+  "author": "Mingdeng Du"
+  "publisher": "arXiv"
+  "published": "30 Mar 2026"
+  "url": "https://arxiv.org/abs/2603.28576"
+  "accessed": 2026-11-08
+  "kind": "preprint"
+  "read": "abstract"
+  "note": "Economy-tier prices fall; flagship prices show a \"near-zero exponential fit\". A preprint with one author. Abstract\
+    \ read."
+- "id": "S52"
+  "title": "METR time horizons: Kwa et al. paper, Time Horizon 1.1, tracker, and The Decoder on Claude Mythos"
+  "author": "Kwa et al."
+  "publisher": "METR"
+  "published": "18 Mar 2025 (v4 10 Jul 2026)"
+  "url": "https://arxiv.org/abs/2503.14499"
+  "also":
+  - "https://metr.org/blog/2026-01-29-time-horizon-1-1/"
+  - "https://metr.org/time-horizons/"
+  - "https://the-decoder.com/metr-says-it-can-barely-measure-claude-mythos-palo-alto-networks-warns-of-autonomous-ai-attackers/"
+  - "https://x.com/METR_Evals/status/2052896623852929510"
+  "accessed": 2026-11-08
+  "kind": "paper"
+  "read": "read"
+  "note": "Kwa et al. (arXiv 2503.14499): Claude 3.7 Sonnet 50% horizon about 50 minutes; doubling about every seven months\
+    \ since 2019; \"within 5 years, AI systems will be capable of automating many software tasks that currently take humans\
+    \ a month\", conditional on the results generalising. Time Horizon 1.1 (29 Jan 2026): doubling every 89 to 131 days in\
+    \ post-2023 windows, so the video says \"three to seven months\". Tracker: \"Measurements above 16 hrs are unreliable\
+    \ with our current task suite\". The Decoder (10 May 2026), Claude Mythos Preview tested March 2026: \"at least 16 hours\"\
+    , 95% interval 8.5 to 55 hours; METR's own post is an X link that was not opened. The early 2027 to early 2028 range is\
+    \ the video's own arithmetic: 170 / 16 hours is 3.4 doublings, at 3 to 7 months each from March 2026."
+- "id": "S53"
+  "title": "SMBs swap pricey SaaS contracts for AI-built apps"
+  "publisher": "PYMNTS (citing The Information)"
+  "published": "8 Jul 2026"
+  "url": "https://www.pymnts.com/news/artificial-intelligence/2026/smbs-swap-pricey-saas-contracts-for-ai-built-apps/"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "Reports The Information: firms of 20 to 70 staff \"cut software costs by 40% to 80%\"; self-reported savings by\
+    \ customers building their own internal tools."
+- "id": "S54"
+  "title": "Stack Overflow drops to 1,442 questions in July, down 99% from 2014 peak"
+  "publisher": "PPC Land"
+  "published": "8 Aug 2026"
+  "url": "https://ppc.land/stack-overflow-drops-to-1-442-questions-in-july-down-99-from-2014-peak/"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "Cites the Stack Exchange Data Explorer: 207,204 new questions in Mar 2014, 1,442 in Jul 2026."
+- "id": "S55"
+  "title": "Stack overflow is almost dead"
+  "publisher": "The Pragmatic Engineer"
+  "published": "May 2025"
+  "url": "https://blog.pragmaticengineer.com/stack-overflow-is-almost-dead"
+  "accessed": 2026-11-08
+  "kind": "blog"
+  "read": "read"
+  "note": "\"2014: questions started to decline\"; \"as soon as ChatGPT came out, the number of questions asked declined rapidly\"\
+    ."
+- "id": "S56"
+  "title": "Stack Overflow and OpenAI partner to strengthen the world's most popular large language models"
+  "publisher": "Stack Overflow"
+  "published": "6 May 2024"
+  "url": "https://stackoverflow.co/company/press/archive/openai-partnership"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "OverflowAPI partnership with OpenAI; financial terms are not stated in the release."
+- "id": "S57"
+  "title": "Meta Reports Third Quarter 2026 Results"
+  "publisher": "Meta"
+  "published": "21 Oct 2026"
+  "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/"
+  "accessed": 2026-11-08
+  "kind": "filing"
+  "read": "read"
+  "note": "\"Family daily active people ... 3.64 billion\": all of Meta's apps, not Facebook alone."
+- "id": "S58"
+  "title": "PJM governing documents fact sheet; PJM 2025 annual report, \"PJM by the numbers\""
+  "publisher": "PJM Interconnection"
+  "published": "7 Jan 2025 (fact sheet)"
+  "url": "https://www.pjm.com/-/media/about-pjm/newsroom/fact-sheets/pjm-governing-documents-fact-sheet.pdf"
+  "also":
+  - "https://services.pjm.com/annualreport2025/pjm-by-the-numbers/"
+  - "https://www.pjm.com/about-pjm/who-we-are"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "\"To become a member of PJM, an organization must sign the Operating Agreement\". Annual report: 1,116 members;\
+    \ 67+ million people; 13 states plus D.C. The \"who we are\" page was also read."
+- "id": "S59"
+  "title": "The Coasean Singularity? Demand, Supply, and Market Design with AI Agents"
+  "author": "Shahidi, Rusak, Manning, Fradkin and Horton"
+  "publisher": "National Bureau of Economic Research"
+  "published": "2025"
+  "url": "https://www.nber.org/papers/w34468"
+  "accessed": 2026-11-08
+  "kind": "paper"
+  "read": "search summary"
+  "note": "NBER Working Paper 34468. A search summary of the abstract and chapter; the paper was not read in full. Argued."
+- "id": "S60"
+  "title": "HubSpot earnings calls, Q1 to Q3 2026, with the 10-Q definition of net revenue retention"
+  "publisher": "HubSpot (transcripts on fool.com and earningswhispers.com; filing on SEC EDGAR)"
+  "published": "7 May to 4 Nov 2026"
+  "url": "https://www.fool.com/earnings/call-transcripts/2026/08/12/hubspot-hubs-q2-2026-earnings-call-transcript/"
+  "also":
+  - "https://www.earningswhispers.com/transcript/HUBS/Q32026"
+  - "https://www.sec.gov/Archives/edgar/data/0001404655/000119312526447363/hubs-20260930.htm"
+  "accessed": 2026-11-08
+  "kind": "transcript"
+  "read": "read"
+  "note": "Q1 2026 (7 May 2026, transcript on fool.com; no link recorded): net revenue retention 103%, \"down sequentially\
+    \ as expected\". Q2 (12 Aug 2026): 102%. Q3 (4 Nov 2026): \"Customer dollar retention remained stable and healthy in the\
+    \ high 80s. Net revenue retention was 101%\"; full-year NRR expected \"down about two points year-over-year\". The 10-Q\
+    \ for the quarter to 30 Sep 2026 defines it (monthly cohorts, annualised; restated from Q1 2026 to include partner commissions,\
+    \ so the video compares only 2026 quarters). Transcripts are third-party copies."
+- "id": "S61"
+  "title": "ServiceNow Q3 2026 8-K; Atlassian Q1 FY27 results"
+  "publisher": "ServiceNow (SEC EDGAR); Atlassian (via MediaNet)"
+  "published": "28 Oct 2026; 5 Nov 2026"
+  "url": "https://www.sec.gov/Archives/edgar/data/0001373715/000137371526000092/erq3fy26.htm"
+  "also":
+  - "https://newshub.medianet.com.au/2026/11/atlassian-announces-first-quarter-fiscal-year-2027-results/180552/"
+  "accessed": 2026-11-08
+  "kind": "filing"
+  "read": "read"
+  "note": "ServiceNow subscription revenue +21% (28 Oct 2026); Atlassian revenue +24% (5 Nov 2026)."
+- "id": "S62"
+  "title": "7 Powers, synopsis"
+  "author": "Hamilton Helmer"
+  "publisher": "7powers.com"
+  "url": "https://www.7powers.com/synopsis/"
+  "also":
+  - "https://www.7powers.com"
+  "accessed": 2026-11-08
+  "kind": "book"
+  "read": "read"
+  "note": "Read through Wayback copies of 2026-06-18 and 2026-10-14 (the live site failed TLS from the reading machine): \"\
+    a practical theory of Strategy rooted in the notion of Power, those conditions which create the potential for persistent\
+    \ differential returns.\""
+- "id": "S63"
+  "title": "GPT-4 launch pricing (TechCrunch) and GPT-6.1 Sol pricing (eesel.ai)"
+  "publisher": "TechCrunch; eesel.ai"
+  "published": "14 Mar 2023; 30 Sep 2026"
+  "url": "https://techcrunch.com/2023/03/14/openai-releases-gpt-4-ai-that-it-claims-is-state-of-the-art/"
+  "also":
+  - "https://www.eesel.ai/blog/gpt-6-1-sol-pricing"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "TechCrunch: \"$0.03 per 1,000 'prompt' tokens ... and $0.06 per 1,000 'completion' tokens\". eesel.ai (last edited\
+    \ 30 Sep 2026): \"$2 per million input tokens and $10 per million output tokens\"; a third party citing OpenAI, whose\
+    \ own page did not open. 30/2 = 15, 60/10 = 6."
+- "id": "S64"
+  "title": "The Innovator's Solution, chapter 6: the law of conservation of attractive profits"
+  "author": "Clayton Christensen and Michael Raynor"
+  "publisher": "Harvard Business School Press"
+  "published": "2003"
+  "url": "https://oreilly.com/library/view/disruptive-innovation-the/9781422189986/Text/InnovatorsSolu_chap-6.html"
+  "accessed": 2026-11-08
+  "kind": "book"
+  "read": "snippet"
+  "note": "Checked against a Google Books snippet of p. 168, quoted verbatim in Tim O'Reilly, WTF? (2017): \"When attractive\
+    \ profits disappear at one stage in the value chain because a product becomes modular and commoditized, the opportunity\
+    \ to earn attractive profits with proprietary products will usually emerge at an adjacent stage.\" The book itself was\
+    \ not opened (library lending only); the O'Reilly chapter link refused the reading tool (403). The narration paraphrases\
+    \ that sentence and no stronger. Also published as an article in Harvard Business Review, Feb 2004."
+- "id": "S65"
+  "title": "AI service as software"
+  "publisher": "Foundation Capital"
+  "published": "4 Nov 2026 (page metadata)"
+  "url": "https://foundationcapital.com/ai-service-as-software/"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "\"A $4.6 trillion opportunity\": salaries ($2.3 trillion) plus outsourced services ($2.3 trillion, per Gartner);\
+    \ \"The total public market cap of enterprise software companies exceeds $1 trillion.\" Argued, by a firm that invests\
+    \ in it. Page metadata date 4 Nov 2026."
+- "id": "S66"
+  "title": "Jevons paradox"
+  "publisher": "Wikipedia"
+  "url": "https://en.wikipedia.org/wiki/Jevons_paradox"
+  "accessed": 2026-11-08
+  "kind": "encyclopedia"
+  "read": "read"
+  "note": "Efficiency gains in using a resource can raise total use of it (W. S. Jevons, The Coal Question, 1865). Applying\
+    \ it to code is the video's own step."
+- "id": "S67"
+  "title": "Cloudflare blog post on vinext, and Vercel's response"
+  "author": "Steve Faulkner"
+  "publisher": "Cloudflare"
+  "published": "24 Feb 2026"
+  "url": "https://blog.cloudflare.com/vinext/"
+  "also":
+  - "https://officechai.com/ai/after-cloudflare-created-vercels-next-js-in-a-week-using-ai-vercel-discloses-7-bugs-in-the-new-framework"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "\"One engineer (technically engineering manager) directing AI\"; under a week; \"roughly $1,100 in Claude API tokens\"\
+    ; \"we already have customers running it in production\", while the same post calls it experimental and not battle-tested\
+    \ at scale. The benchmarks are Cloudflare's own. Vercel's CEO on 26 Feb 2026 reported seven vulnerabilities (2 critical,\
+    \ 2 high, 2 medium, 1 low) and a migration guide, as reported by OfficeChai."
+- "id": "S68"
+  "title": "Rate limit changes for non-Marketplace apps"
+  "publisher": "Slack"
+  "published": "29 May 2025"
+  "url": "https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "\"Limited to 1 request per minute\"; objects per request \"reduced to 15\", from 1,000; for commercially distributed\
+    \ non-Marketplace apps; reason given: \"prevent bulk data exfiltration by unvetted applications\"."
+- "id": "S69"
+  "title": "Agent payments announcements: Visa Intelligent Commerce, Mastercard Agent Pay, Google AP2"
+  "publisher": "Visa; Mastercard; Google Cloud"
+  "published": "29 Apr to 16 Sep 2025"
+  "url": "https://corporate.visa.com/en/sites/visa-perspectives/press-releases/product-drop-intelligent-commerce.html"
+  "also":
+  - "https://newsroom.mastercard.com/news/press/2025/april/mastercard-unveils-agent-pay-pioneering-agentic-payments-technology-to-power-commerce-in-the-age-of-ai"
+  - "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol"
+  - "https://ap2-protocol.org"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "Visa (30 Apr 2025): \"Each consumer sets the limits, and Visa helps manage the rest\". Mastercard (29 Apr 2025):\
+    \ agents \"registered and verified\". Google (16 Sep 2025): the user \"signs a detailed Intent Mandate upfront\". All\
+    \ three are company announcements."
+- "id": "S70"
+  "title": "European Parliament resolution on civil law rules on robotics; EAPIL on the withdrawn AI Liability Directive"
+  "publisher": "European Parliament; EAPIL"
+  "published": "16 Feb 2017; 9 Oct 2025"
+  "url": "https://www.europarl.europa.eu/doceo/document/TA-8-2017-0051_EN.html"
+  "also":
+  - "https://eapil.org/2025/10/09/european-commission-withdraws-two-proposals-assignments-of-claims-regulation-and-ai-liability-directive/"
+  - "https://www.legislature.ohio.gov/legislation/136/hb469"
+  "accessed": 2026-11-08
+  "kind": "filing"
+  "read": "read"
+  "note": "Paragraph 59(f): \"the status of electronic persons responsible for making good any damage they may cause\". EAPIL\
+    \ (9 Oct 2025): AI Liability Directive withdrawn, Official Journal 6 Oct 2025. \"No country\" means none found in the\
+    \ prior-art searches, where US states (Ohio HB 469) legislate the other way; that Ohio bill page was read for its title\
+    \ only."
+- "id": "S71"
+  "title": "Mr. Buffett on the Stock Market (Fortune, 22 Nov 1999), reprints"
+  "author": "Warren Buffett (compiled by Carol Loomis)"
+  "publisher": "valueinvestingworld.com (blog repost); The Motley Fool"
+  "published": "21 Jul 2008 (repost)"
+  "url": "https://www.valueinvestingworld.com/2008/07/mr-buffett-on-stock-market-1999-article.html"
+  "also":
+  - "https://g.foolcdn.com/boringport/2000/boringport000228.htm"
+  "accessed": 2026-11-08
+  "kind": "blog"
+  "read": "read"
+  "note": "Reprint carrying Buffett's \"wide, sustainable moats\" passage; the Fortune original was not opened. A Motley Fool\
+    \ piece of 28 Feb 2000 confirms the Fortune article."
+  "dropped": "read during the research; not cited in the video (the 2007 letter, S49, is cited instead, since it is the primary\
+    \ text)"
+- "id": "S72"
+  "title": "The Power of Bitcoin's Network Effect"
+  "publisher": "NYDIG"
+  "published": "27 Nov 2020"
+  "url": "https://www.nydig.com/research/the-power-of-bitcoins-network-effect"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "Applies Metcalfe's Law to bitcoin addresses. Author is a bitcoin-focused investment firm, an interested party;\
+    \ addresses are not users."
+  "dropped": "read during the research; not cited in the video"
+- "id": "S73"
+  "title": "Eastern Interconnection"
+  "publisher": "Wikipedia"
+  "url": "https://en.wikipedia.org/wiki/Eastern_Interconnection"
+  "accessed": 2026-11-08
+  "kind": "encyclopedia"
+  "read": "read"
+  "note": "One of the two major alternating-current grids in North America, at a synchronised 60 Hz."
+  "dropped": "read during the research; not cited in the video"
+- "id": "S74"
+  "title": "About NERC"
+  "publisher": "North American Electric Reliability Corporation"
+  "url": "https://www.nerc.com/AboutNERC/Pages/default.aspx"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "NERC develops and enforces mandatory Reliability Standards; designated the Electric Reliability Organization on\
+    \ 20 Jul 2006."
+  "dropped": "read during the research; not cited in the video"
+- "id": "S75"
+  "title": "Stack Overflow now gets fewer than 1,000 questions a month (counted via the API)"
+  "author": "Frank Chu"
+  "publisher": "DEV Community"
+  "url": "https://dev.to/frankchu/stack-overflow-now-gets-fewer-than-1000-questions-a-month-i-counted-via-the-api-4ep1"
+  "accessed": 2026-10-29
+  "kind": "blog"
+  "read": "read"
+  "note": "Counts of questions by API: 1,019 in Aug 2026, 969 in Sep 2026. Used as a cross-check on a different counting method;\
+    \ deleted questions may or may not be included. Queried 2026-10-29."
+  "dropped": "read during the research; not cited in the video"
+- "id": "S76"
+  "title": "AI has basically killed Stack Overflow"
+  "publisher": "Futurism"
+  "published": "14 Jan 2026"
+  "url": "https://futurism.com/artificial-intelligence/ai-has-basically-killed-stack-overflow"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "Questions per month fell from over 21,000 in Jan 2025 to 3,607 by Dec; its claim of 100,000 a month in early 2023\
+    \ does not agree with other counts and was treated as unconfirmed."
+  "dropped": "Figures disagree with other counts for the same months; the video uses another source (S54)"
+- "id": "S77"
+  "title": "Are LLMs making Stack Overflow irrelevant?"
+  "publisher": "The Pragmatic Engineer"
+  "published": "Jan 2025"
+  "url": "https://newsletter.pragmaticengineer.com/p/are-llms-making-stackoverflow-irrelevant"
+  "accessed": 2026-11-08
+  "kind": "newsletter"
+  "read": "read"
+  "note": "\"ChatGPT merely sped up the decline\"; Stack Overflow \"is the victim of LLMs ingesting data on its own Q&A site,\
+    \ and providing a much better interface\"."
+  "dropped": "read during the research; not cited in the video (S55 is cited instead)"
+- "id": "S78"
+  "title": "Stack Overflow acquired by Prosus for a reported $1.8 billion"
+  "publisher": "TechCrunch"
+  "published": "2 Jun 2021"
+  "url": "https://techcrunch.com/2021/06/02/stack-overflow-acquired-by-prosus-for-a-reported-1-8-billion"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "Reported by the Wall Street Journal; Prosus confirmed the number in a press release. Read through a Wayback copy."
+  "dropped": "read during the research; not cited in the video"
+- "id": "S79"
+  "title": "Stack Overflow cuts 28% of its staff"
+  "publisher": "TechCrunch"
+  "published": "17 Oct 2023"
+  "url": "https://techcrunch.com/2023/10/17/stack-overflow-cuts-28-of-its-staff"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "CEO said headcount was cut \"approximately 28%\", announced 16 Oct 2023, citing the path to profitability and \"\
+    macroeconomic pressures\"."
+  "dropped": "read during the research; not cited in the video"
+- "id": "S80"
+  "title": "Google Cloud and Stack Overflow strategic gen-AI partnership"
+  "publisher": "Stack Overflow"
+  "published": "29 Feb 2024"
+  "url": "https://stackoverflow.co/company/press/archive/google-cloud-strategic-gen-ai-partnership"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "search summary"
+  "note": "Announced 29 Feb 2024; terms undisclosed. The page was not opened."
+  "dropped": "search summary only in the research notes; not cited in the video"
+- "id": "S81"
+  "title": "Epoch AI, AI and compute"
+  "publisher": "Epoch AI"
+  "published": "Updated 5 Feb 2026 per the page"
+  "url": "https://epoch.ai/research/ai-and-compute"
+  "accessed": 2026-11-08
+  "kind": "dataset"
+  "read": "read"
+  "note": "A search summary claimed fixed-performance cost \"has been halving every 2 months\"; the page was opened and has\
+    \ no such statement (only that the cost to train frontier language models has doubled every 7 months since 2020)."
+  "dropped": "claim not supported by the page"
+- "id": "S82"
+  "title": "Artificial Analysis models page (Intelligence Index vs cost)"
+  "publisher": "Artificial Analysis"
+  "url": "https://artificialanalysis.ai/models"
+  "accessed": 2026-11-08
+  "kind": "leaderboard"
+  "read": "read"
+  "note": "Draws a \"Pareto line\" on its Intelligence Index vs cost chart without defining it; the page text was seen only\
+    \ through a summary. Undated live page."
+  "dropped": "read during the research; not cited in the video; it does not define \"pareto\" in words, so the video relies\
+    \ on Epoch's method (S24)"
+- "id": "S83"
+  "title": "Claude Code source leak: a timeline"
+  "publisher": "Kilo"
+  "url": "https://blog.kilo.ai/p/claude-code-source-leak-a-timeline"
+  "accessed": 2026-11-08
+  "kind": "blog"
+  "read": "read"
+  "note": "GitHub disabled \"over 8,100 repositories\" after DMCA takedowns; a Python rewrite reached 50,000 stars in about\
+    \ two hours. The leak was not reverse engineering from outside, and no usage figures were found."
+  "dropped": "stars measure attention, not use; no download, user or revenue figure found"
+- "id": "S84"
+  "title": "The Pulse: Cloudflare rewrites Next.js as AI rewrites commercial open source"
+  "publisher": "The Pragmatic Engineer"
+  "url": "https://blog.pragmaticengineer.com/the-pulse-cloudflare-rewrites-next-js-as-ai-rewrites-commercial-open-source"
+  "accessed": 2026-11-08
+  "kind": "newsletter"
+  "read": "read"
+  "note": "Says the rewrite is not production-ready."
+  "dropped": "read during the research; not cited in the video (the Cloudflare post, S67, is the source used)"
+- "id": "S85"
+  "title": "Hacking Cloudflare vinext"
+  "publisher": "Hacktron"
+  "url": "https://hacktron.ai/blog/hacking-cloudflare-vinext"
+  "accessed": 2026-11-08
+  "kind": "blog"
+  "read": "search summary"
+  "note": "Reported 45 more issues, 24 manually validated. Seen only in a search summary."
+  "dropped": "search summary only in the research notes; not cited in the video; unconfirmed"
+- "id": "S86"
+  "title": "Photocraft/ArtCraft Photoshop clone coverage (OMG! Ubuntu, Phoronix, Born City)"
+  "publisher": "OMG! Ubuntu; Phoronix; Born City"
+  "published": "Oct 2026"
+  "url": "https://www.omgubuntu.co.uk/2026/10/artcraft-free-photoshop-ai-clone"
+  "also":
+  - "https://www.phoronix.com/news/Photocraft-Filmcraft-AI"
+  - "https://borncity.com/news/photocraft-photoshop-klon-oeffnet-307-von-309-psd-dateien-fehlerfrei"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "About 17,000 GitHub stars; Born City (30 Oct 2026, in German) reports an unnamed tester opened and saved PSD files\
+    \ without distortion in 307 of 309 attempts. No downloads or users reported."
+  "dropped": "stars and unverified claims only; no evidence of use"
+- "id": "S87"
+  "title": "Python chardet 7.0 rewrite (LWN)"
+  "publisher": "LWN.net"
+  "published": "5 Mar 2026"
+  "url": "https://lwn.net/SubscriberLink/1061534/792ad3b59c3dc8c9"
+  "also":
+  - "https://pypistats.org/api/packages/chardet/recent"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "The maintainer released a complete rewrite done with Claude as 7.0.0, changing the licence from LGPL to MIT; the\
+    \ original author disputed it. Download counts from pypistats (157 million in the last month) are total use of the package,\
+    \ mostly automated installs, not use of 7.0."
+  "dropped": "read during the research; not cited in the video"
+- "id": "S88"
+  "title": "Anthropic clarifies ban on third-party Claude access"
+  "publisher": "The Register"
+  "published": "20 Feb 2026"
+  "url": "https://www.theregister.com/2026/02/20/anthropic_clarifies_ban_third_party_claude_access"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "Using OAuth tokens from consumer accounts in other products \"is not permitted and constitutes a violation of the\
+    \ Consumer Terms of Service.\""
+  "dropped": "read during the research; not cited in the video"
+- "id": "S89"
+  "title": "Video game reverse-engineering community shuts down because AI has made it too easy"
+  "publisher": "404 Media"
+  "published": "15 Oct 2026"
+  "url": "https://404media.co/video-game-reverse-engineering-community-shuts-down-because-ai-has-made-it-too-easy"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "An administrator says matching decompilation was a \"brutally difficult, time consuming task, on the scale of years\"\
+    \ and \"the community aspect of decompilation has been broken.\" No percentages or project times."
+  "dropped": "read during the research; not cited in the video"
+- "id": "S90"
+  "title": "Selloff wipes out nearly $1 trillion from software and services stocks"
+  "publisher": "Profit (Pakistan Today), citing Reuters"
+  "published": "5 Feb 2026"
+  "url": "https://profit.pakistantoday.com.pk/2026/02/05/selloff-wipes-out-nearly-1-trillion-from-software-and-services-stocks-as-investors-debate-ais-existential-threat"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "search summary"
+  "note": "Reuters via Profit: a Goldman Sachs basket of US software stocks fell 6% on 3 Feb 2026; headline \"nearly $1 trillion\"\
+    . Other outlets say $285 to 300 billion."
+  "dropped": "search summary only in the research notes; not cited in the video; no authoritative total"
+- "id": "S91"
+  "title": "Nvidia loses $589 billion in market cap after DeepSeek release"
+  "publisher": "Tom's Hardware"
+  "published": "27 Jan 2025"
+  "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-loses-usd589-billion-in-market-cap-broad-stock-plunge-triggered-by-deepseek-ai-release"
+  "also":
+  - "https://www.bloomberg.com/news/articles/2025-01-27/asml-sinks-as-china-ai-startup-triggers-panic-in-tech-stocks"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "search summary"
+  "note": "About $589 billion of market value lost on 27 Jan 2025 (Bloomberg; Reuters versions say $593 billion). Search summary\
+    \ only."
+  "dropped": "a market reaction to an original model, not a rebuild of a product"
+- "id": "S92"
+  "title": "Net revenue retention (vendor glossaries)"
+  "publisher": "Zenskar; Maxio"
+  "url": "https://docs.zenskar.com/docs/net-revenue-retention"
+  "also":
+  - "https://www.maxio.com/?p=12908"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "search summary"
+  "note": "Glossary definition: how much recurring revenue a business keeps from existing customers, counting expansion, contraction\
+    \ and churn, excluding new customers. Seen in search summaries only."
+  "dropped": "search summary only in the research notes; not cited in the video (the HubSpot 10-Q in S60 gives the definition\
+    \ used)"
+- "id": "S93"
+  "title": "HubSpot Q2 2026 results release (exhibit 99.1)"
+  "publisher": "HubSpot, via SEC EDGAR"
+  "published": "12 Aug 2026"
+  "url": "https://www.sec.gov/Archives/edgar/data/0001404655/000119312526335148/hubs-ex99_1.htm"
+  "accessed": 2026-11-08
+  "kind": "filing"
+  "read": "read"
+  "note": "\"Total revenue was $911.7 million, up 20% on an as-reported basis and 17% in constant currency.\" No net revenue\
+    \ retention figure in it."
+  "dropped": "superseded by the Q3 2026 release (S29)"
+- "id": "S94"
+  "title": "Baumol's cost disease (NYU Stern)"
+  "author": "William J. Baumol"
+  "publisher": "NYU Stern"
+  "url": "https://www.stern.nyu.edu/experience-stern/faculty-research/baumol-cost-disease.md"
+  "accessed": 2026-11-08
+  "kind": "encyclopedia"
+  "read": "read"
+  "note": "The cost disease is \"a major source of rapidly rising costs in service sectors of the economy\" (the 2012 book\
+    \ entry by William J. Baumol)."
+  "dropped": "prior art considered; not used in the video"
+- "id": "S95"
+  "title": "Baumol's Cost Disease Is Real, But The \"Drug And AI Doctor\" Cure Is Overstated"
+  "publisher": "Health Affairs Forefront"
+  "published": "Jun 2026"
+  "url": "https://www.healthaffairs.org/doi/full/10.1377/forefront.20260605.561338"
+  "accessed": 2026-11-08
+  "kind": "blog"
+  "read": "read"
+  "note": "Applies Baumol to AI in health care only: lowering the variable cost of one encounter \"may not lower the total\
+    \ cost of care\". Not about code."
+  "dropped": "prior art considered; about health care, not code"
+- "id": "S96"
+  "title": "Strategy Letter V"
+  "author": "Joel Spolsky"
+  "publisher": "Joel on Software"
+  "published": "12 Jun 2002"
+  "url": "https://www.joelonsoftware.com/2002/06/12/strategy-letter-v"
+  "accessed": 2026-11-08
+  "kind": "blog"
+  "read": "read"
+  "note": "Spolsky on commoditising complements."
+  "dropped": "prior art considered; not used in the video"
+- "id": "S97"
+  "title": "Competing on power (7 Powers summary)"
+  "publisher": "Think Insights"
+  "url": "https://thinkinsights.net/strategy/competing-power"
+  "accessed": 2026-11-08
+  "kind": "blog"
+  "read": "read"
+  "note": "Secondary summary of the benefit-plus-barrier definition of Power; read in part."
+  "dropped": "prior art considered; the author's own page (S62) is cited instead"
+- "id": "S98"
+  "title": "OpenAI and Stripe Instant Checkout"
+  "publisher": "Stripe"
+  "published": "29 Sep 2025"
+  "url": "https://stripe.com/newsroom/news/stripe-openai-instant-checkout"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "A Shared Payment Token lets ChatGPT \"initiate a payment without exposing the buyer's payment credentials\"; tokens\
+    \ are \"scoped to a specific merchant and cart total\"."
+  "dropped": "prior art considered; the video cites Visa, Mastercard and Google (S69)"
+- "id": "S99"
+  "title": "Visa and OpenAI agent-led payments"
+  "publisher": "Digital Commerce 360"
+  "published": "12 Jun 2026"
+  "url": "https://www.digitalcommerce360.com/2026/06/12/visa-openai-agent-led-payments"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "A Visa and OpenAI agent-led payments tie-up; no adoption numbers, only second-hand McKinsey projections."
+  "dropped": "no primary adoption figures"
+- "id": "S100"
+  "title": "Shared coordination-cost papers: The Headless Firm; From Coase to AI agents"
+  "publisher": "arXiv; California Management Review"
+  "url": "https://arxiv.org/html/2602.21401v1"
+  "also":
+  - "https://cmr.berkeley.edu/assets/documents/pdf/2025-04-from-coase-to-ai-agents-why-the-economics-of-the-firm-still-matters-in-the-age-of-automation.pdf"
+  "accessed": 2026-11-08
+  "kind": "paper"
+  "read": "search summary"
+  "note": "\"The Headless Firm\" (arXiv 2602.21401, 2026) argues market coordination gains on the firm if agents reduce coordination\
+    \ costs. Warin, California Management Review (Apr 2025), argues agents cut internal costs but raise dependence on outside\
+    \ platforms. Search summaries only."
+  "dropped": "search summary only in the research notes; not cited in the video"
+- "id": "S101"
+  "title": "Agentic AI in retail: how autonomous shopping is redefining the customer journey"
+  "author": "Cheris, Vu, Kamel et al."
+  "publisher": "Bain & Company"
+  "published": "14 May 2026"
+  "url": "https://www.bain.com/insights/agentic-ai-in-retail-how-autonomous-shopping-redefining-customer-journey"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "read"
+  "note": "\"Dig your customer moat to protect on-site traffic.\" Loyalty shifts from brands toward outcomes."
+  "dropped": "prior art considered; not used in the video"
+- "id": "S102"
+  "title": "An interview with Ben Thompson by John Collison on the Cheeky Pint podcast"
+  "author": "Ben Thompson"
+  "publisher": "Stratechery"
+  "published": "2026"
+  "url": "https://stratechery.com/2026/an-interview-with-ben-thompson-by-john-collison-on-the-cheeky-pint-podcast"
+  "accessed": 2026-11-08
+  "kind": "transcript"
+  "read": "read"
+  "note": "Read in part (the aggregation framing); the passage on agents was not read in full."
+  "dropped": "prior art considered; read only in part"
+- "id": "S103"
+  "title": "Agentic commerce: how to win and retain customer loyalty"
+  "publisher": "dunnhumby"
+  "url": "https://www.dunnhumby.com/articles/agentic-commerce-how-to-win-and-retain-customer-loyalty"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "search summary"
+  "note": "Thesis: loyalty may attach to the agent that made the recommendation rather than the retailer."
+  "dropped": "search summary only in the research notes; not cited in the video"
+- "id": "S104"
+  "title": "When the Customer is a Machine"
+  "publisher": "Bounteous"
+  "published": "30 Jun 2026"
+  "url": "https://www.bounteous.com/insights/2026/06/30/when-customer-machine"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "search summary"
+  "note": "Thesis: make loyalty legible to agents through an API; the moat is benefits an AI cannot arbitrate away."
+  "dropped": "search summary only in the research notes; not cited in the video"
+- "id": "S105"
+  "title": "Part I - Marketplaces x AI: The End of Marketplaces As We Know Them"
+  "publisher": "B2 Ventures"
+  "url": "https://b2venture.vc/stories/part-i---marketplaces-x-ai-the-end-of-marketplaces-as-we-know-them"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "search summary"
+  "note": "Thesis: shallow distribution and interface lock-in erode when agents are the interface. Date not checked."
+  "dropped": "search summary only in the research notes; not cited in the video"
+- "id": "S106"
+  "title": "Defensibility in the Age of AI"
+  "publisher": "Oregon Venture Fund"
+  "url": "https://www.oregonventurefund.com/perspectives/defensibility-in-the-age-of-ai"
+  "accessed": 2026-11-08
+  "kind": "company statement"
+  "read": "search summary"
+  "note": "Thesis: moats in 2026 rest on regulated market access, embedded distribution and operational depth. Date not checked."
+  "dropped": "search summary only in the research notes; not cited in the video"
+- "id": "S107"
+  "title": "Should AI be given legal personhood? New Law Commission paper raises radical possibility"
+  "publisher": "Legal Cheek"
+  "published": "7 Aug 2025"
+  "url": "https://www.legalcheek.com/2025/08/should-ai-be-given-legal-personhood-new-law-commission-paper-raises-radical-possibility"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "read"
+  "note": "Reports the UK Law Commission discussion paper \"AI and the Law\" (July 2025) raising granting some form of legal\
+    \ personality to AI systems as a \"potentially radical option\". The paper itself was not opened."
+  "dropped": "prior art considered; second-hand report of the paper"
+- "id": "S108"
+  "title": "AI-run companies are coming; Delaware wants to get ahead of them"
+  "publisher": "Bloomberg Law"
+  "url": "https://news.bloomberglaw.com/legal-ethics/ai-run-companies-are-coming-delaware-wants-to-get-ahead-of-them"
+  "accessed": 2026-11-08
+  "kind": "press"
+  "read": "search summary"
+  "note": "A proposal for an AI-run business entity in Delaware. Details unconfirmed."
+  "dropped": "search summary only in the research notes; not cited in the video; details unconfirmed"
